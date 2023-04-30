@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const Login = () => {
     return (  
         <div className="login-page h-full w-full">
@@ -9,13 +10,17 @@ const Login = () => {
                 <form>
                     <h1>Welcome!</h1>
                     <h3>Enter details to login.</h3>
+                    
                     <input type="text" placeholder="Email" />
                     <div className="password-input ">
                         <input type="text" placeholder="Password" />
                         <span>SHOW</span>
                     </div>
                     <span>FORGOT PASSWORD?</span>
-                    <button type="submit" >LOG IN</button>
+
+                    <Link to="/dashboard">
+                        <button type="submit" >LOG IN</button>
+                    </Link>
                 </form>
             </div>
         </div>

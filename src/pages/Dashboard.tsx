@@ -1,6 +1,14 @@
+import PageHeader from "../layouts/PageHeader";
+import SideNavbar from '../layouts/sideNavbar';
+
 const Dashboard = () => {
     return (  
-        <div></div>
+        <div>
+            <PageHeader />
+            <div className="">
+                <SideNavbar />
+            </div>
+        </div>
     );
 }
  

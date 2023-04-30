@@ -5,11 +5,11 @@ const PageHeader = () => {
                 <img src="src\assets\images\lendsqr-logo.svg" alt="" />
             </div>
             <div className="main-content">
-                <div className="wrapper">
+                <div className="container">
                     <div className="search-bar">
                         <input type="text" placeholder="Search for anything" />
                         <span>
-                            <img src="src\assets\icons\pageHeader\search-icon.svg" alt="" />
+                            <img src="" alt="" />
                         </span>
                     </div>
                     <div className="user">

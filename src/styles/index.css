@@ -1233,4 +1233,82 @@ body {
   width: 100%;
   margin-top: 30px;
   border: none;
+}
+
+/* Page Header Component */
+.page-header {
+  width: 100%;
+  height: 80px;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+}
+.page-header .app-logo {
+  width: 280px;
+  height: 100%;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.page-header .app-logo img {
+  height: 30px;
+}
+.page-header .main-content {
+  width: calc(100% - 280px);
+  display: flex;
+  justify-content: center;
+}
+.page-header .main-content .container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.page-header .search-bar {
+  height: 40px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-header .search-bar input {
+  height: 40px;
+  flex-grow: 1;
+  padding: 0 15px;
+  border: 1px solid #b3b3b3;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #545F7D;
+}
+.page-header .search-bar span {
+  height: 100%;
+  width: 56px;
+  background-color: #39CDCC;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.page-header .user {
+  display: flex;
+  align-items: center;
+  color: #213F7D;
+}
+.page-header .user .profile {
+  display: flex;
+  align-items: center;
+  color: #213F7D;
+}
+.page-header .user .profile div {
+  margin-left: 10px;
+  font-weight: 500;
+}
+.page-header .user span {
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.page-header .user .notification-bell {
+  height: 26px;
+  margin: 0 30px;
 }/*# sourceMappingURL=index.css.map */
