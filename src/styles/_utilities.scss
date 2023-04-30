@@ -1,0 +1,128 @@
+
+
+$utilities: (
+    paddings: (
+        prefixes: ( 
+            padding: "p",
+            padding-left: "pl",
+            padding-right: "pr",
+            padding-top: "pt",
+            padding-bottom: "pb",
+        ),
+        values: (
+            0: 0,
+            5: $baseValue * 5,
+            10: $baseValue * 10,
+            15: $baseValue * 15,
+            20: $baseValue * 20,
+            30: $baseValue * 30,
+            40: $baseValue * 40,
+            50: $baseValue * 50,
+        )
+    ),
+
+    margins: (
+        prefixes: ( 
+            margin: "m",
+            margin-left: "ml",
+            margin-right: "mr",
+            margin-top: "mt",
+            margin-bottom: "mb",
+        ),
+        values: (
+            0: 0,
+            5: $baseValue * 5,
+            10: $baseValue * 10,
+            15: $baseValue * 15,
+            20: $baseValue * 20,
+            30: $baseValue * 30,
+            40: $baseValue * 40,
+            50: $baseValue * 50,
+        )
+    ),
+
+    placing: (
+        prefixes: ( 
+            left: "left",
+            right: "right",
+            top: "top",
+            bottom: "bottom",
+            inset: "inset",
+        ),
+        values: (
+            0: 0,
+            5: $baseValue * 5,
+            10: $baseValue * 10,
+            15: $baseValue * 15,
+            20: $baseValue * 20,
+            30: $baseValue * 30,
+            40: $baseValue * 40,
+            50: $baseValue * 50,
+        )
+    ),
+
+    position: (
+        prefixes: ( 
+            position: "ps"
+        ),
+        values: (
+            absolute: "absolute",
+            relative: "relative",
+            sticky: "sticky",
+            fixed: "fixed",
+        )
+    ),
+    
+    opacity: (
+        prefixes: ( 
+            opacity: "opac"
+        ),
+        values: (
+            0: 0,
+            06: 0.06,
+            10: 0.1,
+            16: 0.16,
+            20: 0.2,
+            30: 0.3,
+            40: 0.4,
+            50: 0.5,
+            60: 0.6,
+            70: 0.7,
+            80: 0.8,
+            90: 0.9,
+            100: 1,
+        )
+    ),
+
+    display: (
+        prefixes: ( 
+            display: ""
+        ),
+        values: (
+            flex: "flex",
+            block: "block",
+            hidden: "none",
+            grid: "grid",
+        )
+    ),
+);
+
+@each $property, $map in $utilities {
+    $prefixes: map-get($map, prefixes);
+    $values: map-get($map, values);
+
+    @each $key, $shorts in $prefixes {
+
+        @each $num, $val in $values {
+            @if($shorts != "") {
+                .#{$shorts}-#{$num} {
+                    #{$key}: #{$val};
+                }
+            } @else {
+                .#{$num} {
+                    #{$key}: #{$val};
+                }
+            }
+        }
+    }
+}
