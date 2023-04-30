@@ -1,6 +1,52 @@
 
 
 $utilities: (
+    height: (
+        prefixes: ( 
+            height: "h",
+        ),
+        values: (
+            0: 0,
+            5: $basePercentageValue * 5,
+            10: $basePercentageValue * 10,
+            15: $basePercentageValue * 15,
+            20: $basePercentageValue * 20,
+            30: $basePercentageValue * 30,
+            40: $basePercentageValue * 40,
+            50: $basePercentageValue * 50,
+            60: $basePercentageValue * 60,
+            70: $basePercentageValue * 70,
+            80: $basePercentageValue * 80,
+            90: $basePercentageValue * 90,
+            full: $basePercentageValue * 100,
+            screen: 100vh,
+            fit: "fit-content",
+        )
+    ),
+
+    width: (
+        prefixes: ( 
+            width: "w",
+        ),
+        values: (
+            0: 0,
+            5: $basePercentageValue * 5,
+            10: $basePercentageValue * 10,
+            15: $basePercentageValue * 15,
+            20: $basePercentageValue * 20,
+            30: $basePercentageValue * 30,
+            40: $basePercentageValue * 40,
+            50: $basePercentageValue * 50,
+            60: $basePercentageValue * 60,
+            70: $basePercentageValue * 70,
+            80: $basePercentageValue * 80,
+            90: $basePercentageValue * 90,
+            full: $basePercentageValue * 100,
+            screen: 100vw,
+            fit: "fit-content",
+        )
+    ),
+
     paddings: (
         prefixes: ( 
             padding: "p",
@@ -11,13 +57,18 @@ $utilities: (
         ),
         values: (
             0: 0,
-            5: $baseValue * 5,
-            10: $baseValue * 10,
-            15: $baseValue * 15,
-            20: $baseValue * 20,
-            30: $baseValue * 30,
-            40: $baseValue * 40,
-            50: $baseValue * 50,
+            5: $basePixelValue * 5,
+            10: $basePixelValue * 10,
+            15: $basePixelValue * 15,
+            20: $basePixelValue * 20,
+            30: $basePixelValue * 30,
+            40: $basePixelValue * 40,
+            50: $basePixelValue * 50,
+            60: $basePixelValue * 60,
+            70: $basePixelValue * 70,
+            80: $basePixelValue * 80,
+            90: $basePixelValue * 90,
+            100: $basePixelValue * 100,
         )
     ),
 
@@ -31,13 +82,18 @@ $utilities: (
         ),
         values: (
             0: 0,
-            5: $baseValue * 5,
-            10: $baseValue * 10,
-            15: $baseValue * 15,
-            20: $baseValue * 20,
-            30: $baseValue * 30,
-            40: $baseValue * 40,
-            50: $baseValue * 50,
+            5: $basePixelValue * 5,
+            10: $basePixelValue * 10,
+            15: $basePixelValue * 15,
+            20: $basePixelValue * 20,
+            30: $basePixelValue * 30,
+            40: $basePixelValue * 40,
+            50: $basePixelValue * 50,
+            60: $basePixelValue * 60,
+            70: $basePixelValue * 70,
+            80: $basePixelValue * 80,
+            90: $basePixelValue * 90,
+            100: $basePixelValue * 100,
         )
     ),
 
@@ -51,13 +107,18 @@ $utilities: (
         ),
         values: (
             0: 0,
-            5: $baseValue * 5,
-            10: $baseValue * 10,
-            15: $baseValue * 15,
-            20: $baseValue * 20,
-            30: $baseValue * 30,
-            40: $baseValue * 40,
-            50: $baseValue * 50,
+            5: $basePixelValue * 5,
+            10: $basePixelValue * 10,
+            15: $basePixelValue * 15,
+            20: $basePixelValue * 20,
+            30: $basePixelValue * 30,
+            40: $basePixelValue * 40,
+            50: $basePixelValue * 50,
+            60: $basePixelValue * 60,
+            70: $basePixelValue * 70,
+            80: $basePixelValue * 80,
+            90: $basePixelValue * 90,
+            100: $basePixelValue * 100,
         )
     ),
 
@@ -91,18 +152,6 @@ $utilities: (
             80: 0.8,
             90: 0.9,
             100: 1,
-        )
-    ),
-
-    display: (
-        prefixes: ( 
-            display: ""
-        ),
-        values: (
-            flex: "flex",
-            block: "block",
-            hidden: "none",
-            grid: "grid",
         )
     ),
 );

@@ -2,15 +2,15 @@
 $primary: #213F7D;
 $secondary: #545F7D;
 $green-100: #39CDCC; 
-$background100: white;
-$background200: #FBFBFB;
+$background-100: white;
+$background-200: #FBFBFB;
 
-$pink: #DF18FF;
-$purple: #5718FF;
-$orange: #F55F44;
+$pink-100: #DF18FF;
+$purple-100: #5718FF;
+$orange-100: #F55F44;
 $red-100: #FF3366;
 
-$yellow: #E9B200;
+$yellow-100: #E9B200;
 $red-200: #E4033B;
 $green-200: #39CD62;
 
@@ -18,5 +18,6 @@ $green-200: #39CD62;
 $fontRoboto: 'Roboto', sans-serif;
 $fontWorksans: 'Work Sans', sans-serif;
 
-// spacing
-$baseValue: 1px;
+// size
+$basePixelValue: 1px;
+$basePercentageValue: 1%

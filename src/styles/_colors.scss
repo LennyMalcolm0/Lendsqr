@@ -4,19 +4,25 @@ $allColors: (
     primary: $primary,
     secondary: $secondary,
     green-100: $green-100,
-    background100: $background100,
-    background200: $background200,
-    pink: $pink,
-    purple: $purple,
-    orange: $orange,
+    background-100: $background-100,
+    background-200: $background-200,
+    pink-100: $pink-100,
+    purple-100: $purple-100,
+    orange-100: $orange-100,
     red-100: $red-100,
-    yellow: $yellow,
+    yellow-100: $yellow-100,
     red-200: $red-200,
     green-200: $green-200,
 );
 
+$buttons: (
+    secondary: $secondary,
+    green-100: $green-100,
+    red-200: $red-200,
+);
+
 @each $key, $val in $allColors {
-    @if($key != "background100" and $key != "background200") {
+    @if($key != "background-100" and $key != "background-200") {
         .text-#{$key} {
             color: $val;
         }
@@ -40,31 +46,18 @@ $allColors: (
     }
 };
 
-$buttons: (
-    secondary: $secondary,
-    green-100: $green-100,
-    green-200: $green-200,
-    red-200: $red-200,
-);
-
-@mixin buttons() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@each $key, $val in $buttons {
-    @if($key != "filter") {
-        .button-outline-#{$key} {
-            @include buttons();
-            border: 1px solid $val;
-            color: $val;
-        }
-    } @else {
-        .button-#{$key} {
-            @include buttons();
-            background-color: $val;
-            color: white;
-        }
-    }
-}
+// @each $key, $val in $buttons {
+//     @if($key != "filter") {
+//         .button-outline-#{$key} {
+//             @include buttons();
+//             border: 1px solid $val;
+//             color: $val;
+//         }
+//     } @else {
+//         .button-#{$key} {
+//             @include buttons();
+//             background-color: $val;
+//             color: white;
+//         }
+//     }
+// }

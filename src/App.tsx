@@ -1,13 +1,17 @@
 import './styles/index.css'
-import PageHeader from './layouts/PageHeader'
-import SideNavbar from './layouts/sideNavbar'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Login from './pages/Login'
 
 function App() {
 
   return (
     <div className="app">
-      {/* <PageHeader />
-      <SideNavbar /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Navigate to="/login" />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
