@@ -26,6 +26,24 @@ body {
   overflow: hidden;
 }
 
+input:focus {
+  outline: #39CDCC;
+  border-color: #39CDCC;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #545F7D;
+}
+
 .login-page {
   height: 100%;
   width: 100%;
@@ -69,22 +87,18 @@ body {
   color: #545F7D;
   font-size: 20px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 27px;
 }
 .login-page form input {
   height: 50px;
   width: 100%;
   padding: 0 15px;
   margin-bottom: 20px;
-  outline: none;
   border: 2px solid rgba(84, 95, 125, 0.15);
   border-radius: 5px;
   color: #545F7D;
   font-size: 14px;
-  line-height: 20px;
-}
-.login-page form input:focus {
-  border-color: #39CDCC;
+  line-height: 19px;
 }
 .login-page form .password-input {
   position: relative;
@@ -98,7 +112,7 @@ body {
   color: #39CDCC;
   font-size: 12px;
   font-weight: 600;
-  line-height: 16.39px;
+  line-height: 16px;
   cursor: pointer;
 }
 .login-page form button {
@@ -141,6 +155,7 @@ body {
 }
 .page-header .main-content .container {
   width: 90%;
+  max-width: 1500px;
   display: flex;
   justify-content: space-between;
 }
@@ -200,7 +215,7 @@ body {
 
 /* Side Navigation Bar */
 .side-bar {
-  height: calc(100vh - 80px);
+  height: 100%;
   width: 280px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   overflow-y: scroll;
@@ -271,15 +286,85 @@ body {
   font-size: 12px;
 }
 
-::-webkit-scrollbar {
-  width: 3px;
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}
+.summary .card {
+  padding: 20px 30px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.summary .card .image-container {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.summary .card .image-container img {
+  position: relative;
+  z-index: 9999;
+}
+.summary .card .image-container .background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+.summary .card .title {
+  margin: 10px 0;
+  color: #545F7D;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.summary .card .value {
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.summary .background:nth-child(1) {
+  background-color: #DF18FF;
+}
+.summary .background:nth-child(2) {
+  background-color: #5718FF;
+}
+.summary .background:nth-child(3) {
+  background-color: #F55F44;
+}
+.summary .background:nth-child(4) {
+  background-color: #FF3366;
 }
 
-::-webkit-scrollbar-track {
-  background-color: whitesmoke;
+.dashboard {
+  background: #FBFBFB;
 }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 25px;
-  background-color: #545F7D;
+.dashboard .page-body {
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+}
+.dashboard .page-body .main-content {
+  height: 100%;
+  width: calc(100% - 280px);
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+.dashboard .page-body .main-content .container {
+  width: 90%;
+  max-width: 1500px;
+}
+.dashboard .page-body .main-content h1 {
+  margin: 40px 0;
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
 }/*# sourceMappingURL=index.css.map */

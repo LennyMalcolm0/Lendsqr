@@ -1,12 +1,20 @@
-import PageHeader from "../layouts/PageHeader";
+
+import Summary from '../components/summary';
+import PageHeader from '../layouts/pageHeader';
 import SideNavbar from '../layouts/sideNavbar';
 
 const Dashboard = () => {
     return (  
-        <div>
+        <div className="dashboard">
             <PageHeader />
-            <div className="">
+            <div className="page-body">
                 <SideNavbar />
+                <div className="main-content">
+                    <div className="container">
+                        <h1>Users</h1>
+                        <Summary />
+                    </div>
+                </div>
             </div>
         </div>
     );

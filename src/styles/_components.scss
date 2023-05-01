@@ -1,0 +1,31 @@
+@mixin buttons($background, $color) {
+    background: $background;
+    border-radius: 8px;
+    color: $color;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin centerContents() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin spaceContents($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
