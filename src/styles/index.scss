@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @import 'variables';
-@import 'utilities';
-@import 'colors';
-@import 'components';
 
 * {
     margin: 0;
@@ -19,26 +16,36 @@ body {
     width: 100%;
     background-color: white;
     font-family: $fontWorksans;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
     overflow: hidden;
 }
 
 // Login page
 
 .login-page {
+    height: 100%;
+    width: 100%;
     display: flex;
 
     .lendsqr-logo {
+        position: absolute;
+        top: 60px;
+        left: 60px;
         height: 36px;
     }
 
-    .images {
+    .image-2d {
+        height: 100vh;
+        width: 50%;
+        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .form-container {
+        height: 100vh;
+        width: 50%;
         box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
         display: flex;
         align-items: center;
@@ -158,13 +165,13 @@ body {
             border: 1px solid #b3b3b3;
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
-            color: #545F7D;
+            color: $secondary;
         }
 
         span {
             height: 100%;
             width: 56px;
-            background-color: #39CDCC;
+            background-color: $green-100;
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
             display: grid;
@@ -176,12 +183,12 @@ body {
     .user {
         display: flex;
         align-items: center;
-        color: #213F7D;
+        color: $primary;
 
         .profile {
             display: flex;
             align-items: center;
-            color: #213F7D;
+            color: $primary;
             
             div {
                 margin-left: 10px;
@@ -190,7 +197,7 @@ body {
         }
 
         span {
-            font-family: 'Roboto', sans-serif;
+            font-family: $fontRoboto;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -198,6 +205,114 @@ body {
         .notification-bell {
             height: 26px;
             margin: 0 30px;
+            cursor: pointer;
+        }
+
+        .caret-down {
+            cursor: pointer;
         }
     }
+}
+
+/* Side Navigation Bar */
+
+.side-bar {
+    height: calc(100vh - 80px);
+    width: 280px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+    overflow-y: scroll;
+
+    .top-section, .bottom-section {
+        div {
+            height: 40px;
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+
+            span {
+                margin: 0 10px;
+            }
+        }
+
+        .dropdown {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+    }
+    
+    .nav-categories {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #b3b3b3;
+    }
+    
+    .nav-items-category {
+        padding-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        color: $secondary;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+    .nav-item {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        padding-left: 30px;
+        border-left: 3px solid transparent;
+        display: flex;
+        align-items: center;
+        color: $primary;
+        cursor: pointer;
+
+        img {
+            margin-right: 10px;
+        }
+
+        .dim-background {
+            position: absolute;
+            inset: 0;
+            background-color: $green-100;
+            opacity: 0;
+        }
+    }
+
+    .nav-item:hover {
+        border-color: $green-100;
+
+        .dim-background {
+            opacity: 0.06;
+        }
+    }
+
+    .nav-item-active {
+        border-color: $green-100;
+
+        .dim-background {
+            opacity: 0.06;
+        }
+    }
+
+    .bottom-section {
+        padding: 10px 0;
+
+        .app-version {
+            font-size: 12px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: $secondary;
 }
