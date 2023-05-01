@@ -21,11 +21,19 @@
     justify-content: $justify;
 }
 
-.flex-align-center {
-    display: flex;
-    align-items: center;
-}
 
-.cursor-pointer {
-    cursor: pointer;
+$statusStates: (
+    active: $green-200,
+    inactive: $green-200,
+    pending: $green-200,
+    blacklisted: $green-200,
+);
+
+@each $key, $val in $statusStates {
+    .#{$key}-text {
+        color: $val;
+    }
+    .#{$key}-bg {
+        background: $val;
+    }
 }

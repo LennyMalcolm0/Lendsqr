@@ -1,12 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.flex-align-center {
-  display: flex;
-  align-items: center;
+.active-text {
+  color: #39CD62;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.active-bg {
+  background: #39CD62;
+}
+
+.inactive-text {
+  color: #39CD62;
+}
+
+.inactive-bg {
+  background: #39CD62;
+}
+
+.pending-text {
+  color: #39CD62;
+}
+
+.pending-bg {
+  background: #39CD62;
+}
+
+.blacklisted-text {
+  color: #39CD62;
+}
+
+.blacklisted-bg {
+  background: #39CD62;
 }
 
 * {
@@ -26,8 +49,13 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: #213F7D;
+}
+
 input:focus {
-  outline: #39CDCC;
+  outline: none;
   border-color: #39CDCC;
 }
 
@@ -128,6 +156,33 @@ input:focus {
   width: 100%;
   margin-top: 30px;
   border: none;
+}
+
+.dashboard {
+  background: #FBFBFB;
+}
+.dashboard .page-body {
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+}
+.dashboard .page-body .main-content {
+  height: 100%;
+  width: calc(100% - 280px);
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+.dashboard .page-body .main-content .container {
+  width: 90%;
+  max-width: 1500px;
+}
+.dashboard .page-body .main-content h1 {
+  margin: 40px 0;
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 /* Page Header Component */
@@ -342,29 +397,138 @@ input:focus {
   background-color: #FF3366;
 }
 
-.dashboard {
-  background: #FBFBFB;
-}
-.dashboard .page-body {
-  height: calc(100vh - 80px);
+.user-data {
   width: 100%;
+  margin-top: 40px;
+}
+.user-data .table {
+  width: 100%;
+  padding: 35px 30px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.user-data .table .headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.user-data .table .headers .header {
   display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
 }
-.dashboard .page-body .main-content {
-  height: 100%;
-  width: calc(100% - 280px);
+.user-data .table .headers img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.user-data .table .users-info {
+  width: 100%;
+  margin-top: 20px;
+}
+.user-data .controller {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  overflow-y: auto;
+  align-items: center;
+  justify-content: space-between;
 }
-.dashboard .page-body .main-content .container {
-  width: 90%;
-  max-width: 1500px;
+.user-data .controller .current-display {
+  display: flex;
+  align-items: center;
+  color: #545F7D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
-.dashboard .page-body .main-content h1 {
-  margin: 40px 0;
-  color: #213F7D;
-  font-size: 24px;
+.user-data .controller .current-display .dropdown {
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 4px;
+  background: rgba(33, 63, 125, 0.1);
+  display: flex;
+  align-items: center;
   font-weight: 500;
-  line-height: 28px;
+}
+.user-data .controller .current-display .dropdown img {
+  margin-left: 15px;
+}
+.user-data .controller .pagination {
+  display: flex;
+  align-items: center;
+}
+.user-data .controller .pagination div, .user-data .controller .pagination span, .user-data .controller .pagination a {
+  margin-left: 20px;
+}
+.user-data .controller .pagination div:first-child {
+  padding: 5px;
+  border-radius: 4px;
+  background: rgba(33, 63, 125, 0.1);
+  display: grid;
+  place-items: center;
+  opacity: 0.6;
+}
+.user-data .controller .pagination div:first-child img {
+  transform: rotate(90deg);
+}
+.user-data .controller .pagination div:last-child {
+  padding: 5px;
+  border-radius: 4px;
+  background: rgba(33, 63, 125, 0.1);
+  display: grid;
+  place-items: center;
+}
+.user-data .controller .pagination div:last-child img {
+  transform: rotate(-90deg);
+}
+.user-data .controller .pagination a, .user-data .controller .pagination span {
+  opacity: 0.6;
+}
+.user-data .controller .pagination .active {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.user-snippet {
+  position: relative;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: #545F7D;
+  font-size: 14px;
+  line-height: 16px;
+}
+.user-snippet div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-snippet div img {
+  margin-right: 10px;
+}
+.user-snippet .indicator {
+  position: relative;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.user-snippet .indicator .status {
+  position: relative;
+}
+.user-snippet .indicator .background {
+  position: absolute;
+  inset: 0;
+  background-color: blue;
+  opacity: 0.1;
+}
+.user-snippet .baseline {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  grid-column: span 6;
+  background: rgba(33, 63, 125, 0.1);
 }/*# sourceMappingURL=index.css.map */

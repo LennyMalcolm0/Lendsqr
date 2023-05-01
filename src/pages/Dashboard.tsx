@@ -2,6 +2,7 @@
 import Summary from '../components/summary';
 import PageHeader from '../layouts/pageHeader';
 import SideNavbar from '../layouts/sideNavbar';
+import UserData from '../components/userData';
 
 const Dashboard = () => {
     return (  
@@ -13,6 +14,7 @@ const Dashboard = () => {
                     <div className="container">
                         <h1>Users</h1>
                         <Summary />
+                        <UserData />
                     </div>
                 </div>
             </div>
