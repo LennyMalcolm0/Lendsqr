@@ -1,7 +1,5 @@
-@mixin buttons($background, $color) {
-    background: $background;
+@mixin buttons() {
     border-radius: 8px;
-    color: $color;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
@@ -15,10 +13,16 @@
     justify-content: center;
 }
 
-@mixin spaceContents($justify) {
+@mixin spaceBetweenContents() {
     display: flex;
     align-items: center;
-    justify-content: $justify;
+    justify-content: space-between;
+}
+
+@mixin flexStart() {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 

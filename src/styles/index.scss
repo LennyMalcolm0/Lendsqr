@@ -61,9 +61,7 @@ input:focus {
         height: 100vh;
         width: 50%;
         margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include centerContents();
     }
 
     .form-container {
@@ -126,11 +124,13 @@ input:focus {
         }
         
         button {
-            @include buttons($background: $green-100, $color: white);
+            @include buttons();
             height: 48px;
             width: 100%;
             margin-top: 30px;
+            background: $green-100;
             border: none;
+            color: white;
         }
 
     }
@@ -370,9 +370,7 @@ input:focus {
             height: 40px;
             width: 40px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include centerContents();
             overflow: hidden;
 
             img {
@@ -457,9 +455,7 @@ input:focus {
 
     .controller {
         margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include spaceBetweenContents();
 
         .current-display {
             display: flex;
@@ -493,12 +489,13 @@ input:focus {
             }
 
             div {
+                padding: 5px;
+                border-radius: 4px;
+                background: rgba(33, 63, 125, 0.1);
+                display: grid;
+                place-items: center;
+
                 &:first-child {
-                    padding: 5px;
-                    border-radius: 4px;
-                    background: rgba(33, 63, 125, 0.1);
-                    display: grid;
-                    place-items: center;
                     opacity: 0.6;
 
                     img {
@@ -506,12 +503,6 @@ input:focus {
                     }
                 }
                 &:last-child {
-                    padding: 5px;
-                    border-radius: 4px;
-                    background: rgba(33, 63, 125, 0.1);
-                    display: grid;
-                    place-items: center;
-
                     img {
                         transform: rotate(-90deg);
                     }
@@ -541,33 +532,65 @@ input:focus {
     line-height: 16px;
 
     div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        position: relative;
+        @include spaceBetweenContents();
 
         img {
             margin-right: 10px;
+            cursor: pointer;
         }
-    }
 
-    .indicator {
-        position: relative;
-        height: 30px;
-        padding: 0 12px;
-        border-radius: 100px;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-
-        .status {
+        .indicator {
             position: relative;
+            height: 30px;
+            padding: 0 12px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            .status {
+                position: relative;
+            }
+
+            .background {
+                position: absolute;
+                inset: 0;
+                background-color: blue;
+                opacity: 0.1;
+            }
         }
 
-        .background {
+        .menu {
             position: absolute;
-            inset: 0;
-            background-color: blue;
-            opacity: 0.1;
+            top: 30px;
+            left: 30px;
+            padding: 5px 0;
+            background: white;
+            border: 1px solid rgba(84, 95, 125, 0.04);
+            box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+            display: none;
+            z-index: 999999;
+
+            .item {
+                width: 170px;
+                padding: 15px 0;
+                @include flexStart();
+                color: $secondary;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+
+                img {
+                    margin-left: 20px;
+                }
+            }
+
+            .item:hover {
+                background: rgba(33, 63, 125, 0.1);
+                cursor: pointer;
+            }
         }
     }
 
@@ -578,5 +601,89 @@ input:focus {
         width: 100%;
         grid-column: span 6;
         background: rgba(33, 63, 125, 0.1);
+    }
+}
+
+// Filter component
+.filter {
+    width: 270px;
+    padding: 30px 15px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    color: $secondary;
+    font-size: 14px;
+    line-height: 16px;
+
+    label {
+        font-weight: 500;
+    }
+
+    input {
+        height: 40px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        border: 1px solid rgba(84, 95, 125, 0.14);
+        border-radius: 8px;
+    }
+
+    .buttons {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+            @include buttons();
+            height: 40px;
+            flex-grow: 1;
+            border: 1px solid $secondary;
+            color: $secondary;
+
+            &:last-child {
+                background: $green-100;
+                border: 1px solid $green-100;
+                color: white;
+            }
+        }
+    }
+}
+
+// Dropdown component
+.drop-down {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+
+    .main-display {
+        height: 40px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        border: 1px solid rgba(84, 95, 125, 0.14);
+        border-radius: 8px;
+        @include spaceBetweenContents();
+    }
+
+    .select-items {
+        width: 100%;
+        padding: 5px 0;
+        display: none;
+
+        .dropdown-item {
+            width: 100%;
+            padding: 15px 20px;
+            @include flexStart();
+            color: $secondary;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(33, 63, 125, 0.1);
+            cursor: pointer;
+        }
     }
 }

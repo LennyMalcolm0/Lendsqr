@@ -144,9 +144,7 @@ input:focus {
   cursor: pointer;
 }
 .login-page form button {
-  background: #39CDCC;
   border-radius: 8px;
-  color: white;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -155,7 +153,9 @@ input:focus {
   height: 48px;
   width: 100%;
   margin-top: 30px;
+  background: #39CDCC;
   border: none;
+  color: white;
 }
 
 .dashboard {
@@ -460,23 +460,18 @@ input:focus {
 .user-data .controller .pagination div, .user-data .controller .pagination span, .user-data .controller .pagination a {
   margin-left: 20px;
 }
-.user-data .controller .pagination div:first-child {
+.user-data .controller .pagination div {
   padding: 5px;
   border-radius: 4px;
   background: rgba(33, 63, 125, 0.1);
   display: grid;
   place-items: center;
+}
+.user-data .controller .pagination div:first-child {
   opacity: 0.6;
 }
 .user-data .controller .pagination div:first-child img {
   transform: rotate(90deg);
-}
-.user-data .controller .pagination div:last-child {
-  padding: 5px;
-  border-radius: 4px;
-  background: rgba(33, 63, 125, 0.1);
-  display: grid;
-  place-items: center;
 }
 .user-data .controller .pagination div:last-child img {
   transform: rotate(-90deg);
@@ -499,14 +494,16 @@ input:focus {
   line-height: 16px;
 }
 .user-snippet div {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .user-snippet div img {
   margin-right: 10px;
+  cursor: pointer;
 }
-.user-snippet .indicator {
+.user-snippet div .indicator {
   position: relative;
   height: 30px;
   padding: 0 12px;
@@ -515,14 +512,44 @@ input:focus {
   align-items: center;
   overflow: hidden;
 }
-.user-snippet .indicator .status {
+.user-snippet div .indicator .status {
   position: relative;
 }
-.user-snippet .indicator .background {
+.user-snippet div .indicator .background {
   position: absolute;
   inset: 0;
   background-color: blue;
   opacity: 0.1;
+}
+.user-snippet div .menu {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding: 5px 0;
+  background: white;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: none;
+  z-index: 999999;
+}
+.user-snippet div .menu .item {
+  width: 170px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #545F7D;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.user-snippet div .menu .item img {
+  margin-left: 20px;
+}
+.user-snippet div .menu .item:hover {
+  background: rgba(33, 63, 125, 0.1);
+  cursor: pointer;
 }
 .user-snippet .baseline {
   position: absolute;
@@ -531,4 +558,86 @@ input:focus {
   width: 100%;
   grid-column: span 6;
   background: rgba(33, 63, 125, 0.1);
+}
+
+.filter {
+  width: 270px;
+  padding: 30px 15px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  color: #545F7D;
+  font-size: 14px;
+  line-height: 16px;
+}
+.filter label {
+  font-weight: 500;
+}
+.filter input {
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  border-radius: 8px;
+}
+.filter .buttons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.filter .buttons button {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  height: 40px;
+  flex-grow: 1;
+  border: 1px solid #545F7D;
+  color: #545F7D;
+}
+.filter .buttons button:last-child {
+  background: #39CDCC;
+  border: 1px solid #39CDCC;
+  color: white;
+}
+
+.drop-down {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+}
+.drop-down .main-display {
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drop-down .select-items {
+  width: 100%;
+  padding: 5px 0;
+  display: none;
+}
+.drop-down .select-items .dropdown-item {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #545F7D;
+}
+.drop-down .select-items .dropdown-item:hover {
+  background: rgba(33, 63, 125, 0.1);
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
