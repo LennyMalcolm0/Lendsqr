@@ -36,6 +36,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s linear;
 }
 
 body {
@@ -45,7 +46,6 @@ body {
   width: 100%;
   background-color: white;
   font-family: "Work Sans", sans-serif;
-  transition: all 0.3s ease-in;
   overflow: hidden;
 }
 
@@ -409,6 +409,7 @@ input:focus {
   border-radius: 4px;
 }
 .user-data .table .headers {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -418,6 +419,11 @@ input:focus {
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
+}
+.user-data .table .headers .header .filter-container {
+  position: absolute;
+  top: 30px;
+  z-index: 999999;
 }
 .user-data .table .headers img {
   margin-left: 10px;
@@ -623,11 +629,22 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+}
+.drop-down .main-display .rotate-up {
+  transform: rotate(180deg);
+}
+.drop-down .main-display .rotate-down {
+  transform: rotate(0deg);
 }
 .drop-down .select-items {
+  position: absolute;
+  top: 45px;
   width: 100%;
   padding: 5px 0;
-  display: none;
+  background: white;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  border-radius: 8px;
 }
 .drop-down .select-items .dropdown-item {
   width: 100%;

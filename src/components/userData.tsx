@@ -1,8 +1,15 @@
+import { useState } from "react";
 import FilterUsers from "./filterUsers";
 import UserSnippet from "./userSnippet";
 
 const UserData = () => {
     const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ]
+
+    const [ filterOpened, setFilterOpened ] = useState<boolean>(false);
+
+    const openFilter = () => {
+        setFilterOpened(filterOpened === true ? false : true);
+    }
 
     return (  
         <div className="user-data">
@@ -11,7 +18,13 @@ const UserData = () => {
                     {headers.map((value, index) => (
                         <div key={index} className="header">
                             <span>{value.toUpperCase()}</span>
-                            <img src="src\assets\icons\userData\filter.svg" alt="" />
+                            <img src="src\assets\icons\userData\filter.svg" alt="" onClick={openFilter} />
+                            {filterOpened ? 
+                                <div className="filter-container">
+                                    <FilterUsers />
+                                </div> :
+                                <></>
+                            }
                         </div>
                     ))}
                 </div>
@@ -22,7 +35,7 @@ const UserData = () => {
             <div className="controller">
                 <div className="current-display">
                     <span>Showing</span>
-                    <span className="dropdown">
+                    <span className="filter">
                         <span>100</span>
                         <img src="src\assets\icons\userData\arrow.svg" alt="" />
                     </span>
@@ -39,7 +52,6 @@ const UserData = () => {
                     <div><img src="src\assets\icons\userData\arrow.svg" alt="" /></div>
                 </div>
             </div>
-            <FilterUsers />
         </div>
     );
 }
