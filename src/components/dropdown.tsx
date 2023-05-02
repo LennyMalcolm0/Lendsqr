@@ -24,13 +24,12 @@ const Dropdown = ({dropdownItems}: Props) => {
                 <div className="current-value">Select</div>
                 <img src="src\assets\icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />
             </div>
-            {dropdownOpened ?
+            {dropdownOpened &&
                 <div className="select-items">
                     {dropdownItems.map((item, index) => (
                         <div key={index} onClick={(e) => setValue(e)} className="dropdown-item">{item}</div>
                     ))}
-                </div> :
-                <></>
+                </div>
             }
         </div>
     );

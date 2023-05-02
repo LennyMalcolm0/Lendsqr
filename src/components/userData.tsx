@@ -1,14 +1,17 @@
-import { useState } from "react";
+import React  from "react";
 import FilterUsers from "./filterUsers";
 import UserSnippet from "./userSnippet";
 
 const UserData = () => {
     const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ]
 
-    const [ filterOpened, setFilterOpened ] = useState<boolean>(false);
+    const openFilter = (e: React.MouseEvent<HTMLElement>) => {
+        const filterImage = e.target as HTMLElement;
+        const filterContainer = filterImage.nextElementSibling as HTMLElement;
 
-    const openFilter = () => {
-        setFilterOpened(filterOpened === true ? false : true);
+        if (filterContainer) {
+            filterContainer.style.display = `${filterContainer.style.display === "block" ? "none" : "block"}`
+        }
     }
 
     return (  
@@ -19,12 +22,9 @@ const UserData = () => {
                         <div key={index} className="header">
                             <span>{value.toUpperCase()}</span>
                             <img src="src\assets\icons\userData\filter.svg" alt="" onClick={openFilter} />
-                            {filterOpened ? 
-                                <div className="filter-container">
-                                    <FilterUsers />
-                                </div> :
-                                <></>
-                            }
+                            <div className="filter-container">
+                                <FilterUsers />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -32,10 +32,11 @@ const UserData = () => {
                     <UserSnippet />
                 </div>
             </div>
+            
             <div className="controller">
                 <div className="current-display">
                     <span>Showing</span>
-                    <span className="filter">
+                    <span className="dropdown">
                         <span>100</span>
                         <img src="src\assets\icons\userData\arrow.svg" alt="" />
                     </span>

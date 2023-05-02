@@ -435,6 +435,7 @@ input:focus {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
             .header {
+                position: relative;
                 display: flex;
                 align-items: center;
                 font-weight: 600;
@@ -444,6 +445,8 @@ input:focus {
                 .filter-container{
                     position: absolute;
                     top: 30px;
+                    left: -60px;
+                    display: none;
                     z-index: 999999;
                 }
             }
@@ -570,7 +573,7 @@ input:focus {
 
         .menu {
             position: absolute;
-            top: 30px;
+            top: 40px;
             left: 30px;
             padding: 5px 0;
             background: white;
@@ -616,6 +619,7 @@ input:focus {
     width: 270px;
     padding: 30px 15px;
     margin-bottom: 40px;
+    background: white;
     border: 1px solid rgba(84, 95, 125, 0.14);
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
     border-radius: 4px;

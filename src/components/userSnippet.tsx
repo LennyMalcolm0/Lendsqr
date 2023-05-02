@@ -1,4 +1,13 @@
 const UserSnippet = () => {
+    const openMenu = (e: React.MouseEvent<HTMLElement>) => {
+        const menuImage = e.target as HTMLElement;
+        const userMenu = menuImage.nextElementSibling as HTMLElement;
+
+        if (userMenu) {
+            userMenu.style.display = `${userMenu.style.display === "block" ? "none" : "block"}`
+        }
+    }
+
     return (  
         <div className="user-snippet">
             <div>Lendsqr</div>
@@ -11,7 +20,7 @@ const UserSnippet = () => {
                     <span className="background"></span>
                     <span className="status">Inactive</span>
                 </span>
-                <img src="src\assets\icons\userData\details.svg" alt="" />
+                <img src="src\assets\icons\userData\details.svg" alt="" onClick={(e) => openMenu(e)} />
 
                 <div className="menu">
                     <div className="item">
