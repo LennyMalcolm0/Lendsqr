@@ -32,7 +32,7 @@ const UserSnippet = ({organization, username, email, phoneNumber, dateJoined, us
 
                 {openedMenu &&
                     <div className="menu">
-                        <Link to={`/user-details/${userId}`} className="item">
+                        <Link to={`/user-details`} className="item">
                             <img src="icons\userData\eye.svg" alt="" />
                             <span>View Details</span>
                         </Link>

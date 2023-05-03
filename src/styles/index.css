@@ -98,6 +98,9 @@ input:focus {
   display: flex;
   align-items: center;
 }
+.login-page .form-container img {
+  display: none;
+}
 .login-page form {
   width: 450px;
   display: flex;
@@ -173,6 +176,7 @@ input:focus {
   display: flex;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .dashboard .page-body .main-content .container {
   width: 90%;
@@ -204,17 +208,6 @@ input:focus {
 .page-header .app-logo img {
   height: 30px;
 }
-.page-header .main-content {
-  width: calc(100% - 280px);
-  display: flex;
-  justify-content: center;
-}
-.page-header .main-content .container {
-  width: 90%;
-  max-width: 1500px;
-  display: flex;
-  justify-content: space-between;
-}
 .page-header .search-bar {
   height: 40px;
   width: 400px;
@@ -223,7 +216,7 @@ input:focus {
   overflow: hidden;
 }
 .page-header .search-bar input {
-  height: 40px;
+  height: 100%;
   flex-grow: 1;
   padding: 0 15px;
   border: 1px solid #b3b3b3;
@@ -241,32 +234,62 @@ input:focus {
   place-items: center;
   cursor: pointer;
 }
-.page-header .user {
+.page-header .smaller-screens {
+  display: none;
+}
+.page-header .content {
+  width: calc(100% - 280px);
+  display: flex;
+  justify-content: center;
+}
+.page-header .content .content-container {
+  width: 90%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-header .content .user {
   display: flex;
   align-items: center;
   color: #213F7D;
 }
-.page-header .user .profile {
-  display: flex;
-  align-items: center;
-  color: #213F7D;
-}
-.page-header .user .profile div {
-  margin-left: 10px;
-  font-weight: 500;
-}
-.page-header .user span {
+.page-header .content .user span {
   font-family: "Roboto", sans-serif;
   text-decoration: underline;
   cursor: pointer;
 }
-.page-header .user .notification-bell {
+.page-header .content .user .notification-bell {
   height: 26px;
-  margin: 0 30px;
+  margin-left: 20px;
   cursor: pointer;
 }
-.page-header .user .caret-down {
+.page-header .content .user .profile {
+  display: flex;
+  align-items: center;
+  color: #213F7D;
+}
+.page-header .content .user .profile .avatar {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.page-header .content .user .profile .avatar img {
+  width: 100%;
+}
+.page-header .content .user .profile div {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.page-header .content .user .profile .caret-down {
   cursor: pointer;
+}
+.page-header .menu-button {
+  display: none;
 }
 
 /* Side Navigation Bar */
@@ -834,4 +857,142 @@ input:focus {
   margin: 30px 0;
   background: #213F7D;
   opacity: 0.1;
+}
+
+@media screen and (max-width: 1100px) {
+  .login-page .lendsqr-logo {
+    top: 40px;
+    left: 30px;
+  }
+  .login-page .image-2d img {
+    width: 100%;
+  }
+  .login-page .center-form {
+    width: min(85%, 450px);
+    margin: 0 auto;
+  }
+  .login-page .center-form form {
+    width: min(100%, 450px);
+    padding: 0;
+  }
+  .page-header {
+    height: 60px;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+  .page-header .app-logo {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+  .page-header .app-logo img {
+    height: 25px;
+  }
+  .page-header .content {
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: flex-start;
+  }
+  .page-header .content .content-container {
+    width: 100%;
+  }
+  .page-header .content .search-bar {
+    display: none;
+  }
+  .page-header .search-bar {
+    height: 35px;
+    width: 300px;
+  }
+  .page-header .search-bar span {
+    width: 50px;
+  }
+  .page-header .smaller-screens {
+    display: flex;
+  }
+  .page-header .user {
+    font-size: 14px;
+  }
+  .page-header .user .notification-bell {
+    height: 20px;
+  }
+  .page-header .user .avatar {
+    height: 40px;
+    width: 40px;
+  }
+  .page-header .user .profile div {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .login-page {
+    padding: 5%;
+  }
+  .login-page .image-2d {
+    display: none;
+  }
+  .login-page img:first-child {
+    display: none;
+  }
+  .login-page .form-container {
+    position: relative;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: none;
+    flex-direction: column;
+  }
+  .login-page .form-container .lendsqr-logo {
+    position: static;
+    inset: 0;
+    height: 25px;
+    align-self: flex-start;
+  }
+  .login-page .form-container img {
+    display: block;
+  }
+  .login-page .form-container .center-form {
+    width: min(100%, 450px);
+  }
+  .login-page .form-container form {
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+  }
+  .login-page .form-container form h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .login-page .form-container form h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page-header {
+    padding: 0 25px;
+  }
+  .page-header .search-bar {
+    width: 230px;
+  }
+  .page-header .search-bar span {
+    width: 40px;
+  }
+  .page-header .user .notification-bell {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-page .form-container {
+    margin-top: 20px;
+  }
+  .login-page .form-container form {
+    margin-top: 80px;
+  }
+  .page-header .search-bar, .page-header .content {
+    display: none;
+  }
+  .page-header .menu-button {
+    display: block;
+    height: 35px;
+  }
 }

@@ -4,7 +4,7 @@ const UserDetailSummary = () => {
         <div className="user-detail-summary">
             <div className="profile">
                 <div className="avatar">
-                    <img src="" alt="" />
+                    <img src="images\profile-pic.svg" alt="" />
                 </div>
 
                 <span>

@@ -70,6 +70,10 @@ input:focus {
         box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
         display: flex;
         align-items: center;
+
+        img {
+            display: none;
+        }
     }
   
     form {
@@ -151,6 +155,7 @@ input:focus {
             display: flex;
             justify-content: center;
             overflow-y: auto;
+            overflow-x: hidden;
 
             .container {
                 width: 90%;
@@ -187,20 +192,7 @@ input:focus {
             height: 30px;
         }
     }
-    
-    .main-content {
-        width: calc(100% - 280px);
-        display: flex;
-        justify-content: center;
 
-        .container {
-            width: 90%;
-            max-width: 1500px;
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    
     .search-bar {
         height: 40px;
         width: 400px;
@@ -209,7 +201,7 @@ input:focus {
         overflow: hidden;
 
         input {
-            height: 40px;
+            height: 100%;
             flex-grow: 1;
             padding: 0 15px;
             border: 1px solid #b3b3b3;
@@ -229,38 +221,71 @@ input:focus {
             cursor: pointer;
         }
     }
-    
-    .user {
-        display: flex;
-        align-items: center;
-        color: $primary;
 
-        .profile {
+    .smaller-screens {
+        display: none;
+    }
+    
+    .content {
+        width: calc(100% - 280px);
+        display: flex;
+        justify-content: center;
+
+        .content-container {
+            width: 90%;
+            max-width: 1500px;
+            @include spaceBetweenContents
+        }
+    
+        .user {
             display: flex;
             align-items: center;
             color: $primary;
-            
-            div {
-                margin-left: 10px;
-                font-weight: 500;
+    
+            span {
+                font-family: $fontRoboto;
+                text-decoration: underline;
+                cursor: pointer;
+            }   
+    
+            .notification-bell {
+                height: 26px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+    
+            .profile {
+                display: flex;
+                align-items: center;
+                color: $primary;
+    
+                .avatar {
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    overflow: hidden;
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+                
+                div {
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }    
+    
+                .caret-down {
+                    cursor: pointer;
+                }
             }
         }
+    }
 
-        span {
-            font-family: $fontRoboto;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .notification-bell {
-            height: 26px;
-            margin: 0 30px;
-            cursor: pointer;
-        }
-
-        .caret-down {
-            cursor: pointer;
-        }
+    .menu-button {
+        display: none;
     }
 }
 
@@ -900,3 +925,6 @@ input:focus {
         opacity: 0.1;
     }
 }
+
+
+@import 'responsiveCode';
