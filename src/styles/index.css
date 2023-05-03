@@ -414,7 +414,7 @@ input:focus {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 15px;
 }
 .users-data .table .headers .header {
   position: relative;
@@ -423,6 +423,11 @@ input:focus {
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
+}
+.users-data .table .headers .header:nth-child(3) {
+  position: relative;
+  right: 50px;
+  width: 200px;
 }
 .users-data .table .headers .header .filter-container {
   position: absolute;
@@ -501,23 +506,24 @@ input:focus {
   height: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 15px;
   color: #545F7D;
   font-size: 14px;
   line-height: 16px;
 }
-.user-snippet div {
+.user-snippet .category {
   position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: start;
 }
-.user-snippet div img {
+.user-snippet .category img {
   margin-right: 10px;
   cursor: pointer;
 }
-.user-snippet div .indicator {
+.user-snippet .category .indicator {
   position: relative;
   height: 30px;
   padding: 0 12px;
@@ -526,16 +532,16 @@ input:focus {
   align-items: center;
   overflow: hidden;
 }
-.user-snippet div .indicator .status {
+.user-snippet .category .indicator .status {
   position: relative;
 }
-.user-snippet div .indicator .background {
+.user-snippet .category .indicator .background {
   position: absolute;
   inset: 0;
   background-color: blue;
   opacity: 0.1;
 }
-.user-snippet div .menu {
+.user-snippet .category .menu {
   position: absolute;
   top: 50px;
   left: 60px;
@@ -544,10 +550,9 @@ input:focus {
   border: 1px solid rgba(84, 95, 125, 0.04);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  display: none;
   z-index: 999999;
 }
-.user-snippet div .menu .item {
+.user-snippet .category .menu .item {
   width: 170px;
   padding: 15px 0;
   display: flex;
@@ -558,12 +563,17 @@ input:focus {
   font-weight: 500;
   line-height: 16px;
 }
-.user-snippet div .menu .item img {
+.user-snippet .category .menu .item img {
   margin-left: 20px;
 }
-.user-snippet div .menu .item:hover {
+.user-snippet .category .menu .item:hover {
   background: rgba(33, 63, 125, 0.1);
   cursor: pointer;
+}
+.user-snippet .category:nth-child(3) {
+  position: relative;
+  right: 50px;
+  width: 200px;
 }
 .user-snippet .base-line {
   position: absolute;

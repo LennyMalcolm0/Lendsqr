@@ -434,7 +434,7 @@ input:focus {
             position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            gap: 5px;
+            gap: 15px;
 
             .header {
                 position: relative;
@@ -443,6 +443,12 @@ input:focus {
                 font-weight: 600;
                 font-size: 12px;
                 line-height: 14px;
+
+                &:nth-child(3) {
+                    position: relative;
+                    right: 50px;
+                    width: 200px;
+                }
 
                 .filter-container{
                     position: absolute;
@@ -539,13 +545,14 @@ input:focus {
     height: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 15px;
     color: $secondary;
     font-size: 14px;
     line-height: 16px;
 
-    div {
+    .category {
         position: relative;
+        width: 100%;
         @include spaceBetweenContents();
         text-align: start;
 
@@ -584,7 +591,6 @@ input:focus {
             border: 1px solid rgba(84, 95, 125, 0.04);
             box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
             border-radius: 4px;
-            display: none;
             z-index: 999999;
 
             .item {
@@ -605,6 +611,12 @@ input:focus {
                 background: rgba(33, 63, 125, 0.1);
                 cursor: pointer;
             }
+        }
+
+        &:nth-child(3) {
+            position: relative;
+            right: 50px;
+            width: 200px;
         }
     }
 

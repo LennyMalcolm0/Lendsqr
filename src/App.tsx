@@ -13,7 +13,8 @@ function App() {
           <Route path='/' element={<Navigate to="/login" />} />
           <Route path='/login' element={<Login />} />
           <Route path='/users' element={<UsersPage />} />
-          <Route path='/user-details' element={<UserDetailsPage />} />
+          <Route path='/user-details/*' element={<UserDetailsPage />} />
+          <Route path='/user-details/:id' element={<UserDetailsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
