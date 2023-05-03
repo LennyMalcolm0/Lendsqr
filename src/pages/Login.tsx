@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (  
         <div className="login-page">
-            <img src="src\assets\images\lendsqr-logo.svg" alt="" className="lendsqr-logo"/>
+            <img src="images\lendsqr-logo.svg" alt="" className="lendsqr-logo"/>
             <div className="image-2d">
-                <img src="src\assets\images\pablo-sign-in.svg" alt="" className="" />
+                <img src="images\pablo-sign-in.svg" alt="" className="" />
             </div>
             <div className="form-container">
                 <form>
@@ -18,7 +18,7 @@ const Login = () => {
                     </div>
                     <span>FORGOT PASSWORD?</span>
 
-                    <Link to="/dashboard">
+                    <Link to="/users">
                         <button type="submit" >LOG IN</button>
                     </Link>
                 </form>

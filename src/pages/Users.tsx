@@ -1,11 +1,10 @@
+import UsersSummary from "../components/usersSummary";
+import UserData from "../components/userData";
+import PageHeader from "../layouts/pageHeader";
+import SideNavbar from "../layouts/sideNavbar";
 
-import Summary from '../components/summary';
-import PageHeader from '../layouts/pageHeader';
-import SideNavbar from '../layouts/sideNavbar';
-import UserData from '../components/userData';
-
-const Dashboard = () => {
-    return (  
+const UsersPage = () => {
+    return ( 
         <div className="dashboard">
             <PageHeader />
             <div className="page-body">
@@ -13,13 +12,13 @@ const Dashboard = () => {
                 <div className="main-content">
                     <div className="container">
                         <h1>Users</h1>
-                        <Summary />
+                        <UsersSummary />
                         <UserData />
                     </div>
                 </div>
             </div>
         </div>
-    );
+     );
 }
  
-export default Dashboard;
+export default UsersPage;

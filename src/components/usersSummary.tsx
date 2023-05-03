@@ -1,29 +1,29 @@
-const Summary = () => {
+const UsersSummary = () => {
     const dataSummary = [
         {
-            imageSource: "src/assets/icons/summary/users.svg",
+            imageSource: "icons/summary/users.svg",
             title: "Users",
             value: "2,453",
         },
         {
-            imageSource: "src/assets/icons/summary/active-users.svg",
+            imageSource: "icons/summary/active-users.svg",
             title: "Active Users",
             value: "2,453",
         },
         {
-            imageSource: "src/assets/icons/summary/users-loans.svg",
+            imageSource: "icons/summary/users-loans.svg",
             title: "Users with Loans",
             value: "12,453",
         },
         {
-            imageSource: "src/assets/icons/summary/users-savings.svg",
+            imageSource: "icons/summary/users-savings.svg",
             title: "Users with Savings",
             value: "102,453",
         },
     ];
 
     return (  
-        <div className="summary">
+        <div className="users-summary">
             {dataSummary.map((summary, index) => (
                 <div key={index} className="card">
                     <div className="image-container">
@@ -38,4 +38,4 @@ const Summary = () => {
     );
 }
  
-export default Summary;
+export default UsersSummary;

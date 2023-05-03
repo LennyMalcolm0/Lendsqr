@@ -6,12 +6,12 @@ const SideNavbar = () => {
         <div className="side-bar">
             <div className="top-section">
                 <div className="dropdown">
-                    <img src="src\assets\icons\sideNavbar\switch-organization.svg" alt="" />
+                    <img src="icons\sideNavbar\switch-organization.svg" alt="" />
                     <span>Swith Organization</span>
-                    <img src="src\assets\icons\sideNavbar\dropdown.svg" alt="" />
+                    <img src="icons\sideNavbar\dropdown.svg" alt="" />
                 </div>
                 <div>
-                    <img src="src\assets\icons\sideNavbar\dashboard.svg" alt="" />
+                    <img src="icons\sideNavbar\dashboard.svg" alt="" />
                     <span>Dashboard</span>
                 </div>
             </div>
@@ -24,7 +24,7 @@ const SideNavbar = () => {
 
             <div className="bottom-section">
                 <div className="nav-item">
-                    <img src="src\assets\icons\sideNavbar\switch-organization.svg" alt="" />
+                    <img src="icons\sideNavbar\switch-organization.svg" alt="" />
                     <span>Logout</span>
                     <div className="dim-background"></div>
                 </div>

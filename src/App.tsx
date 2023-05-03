@@ -1,7 +1,8 @@
 import './styles/index.css'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
+import UsersPage from './pages/Users'
+import UserDetailsPage from './pages/UserDetails'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to="/login" />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/users' element={<UsersPage />} />
+          <Route path='/user-details' element={<UserDetailsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
