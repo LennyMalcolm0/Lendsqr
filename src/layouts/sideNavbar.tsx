@@ -19,7 +19,7 @@ const SideNavbar = () => {
 
     return (  
         <>
-         <div className="page-header">
+         <div className="user-page-header">
             <div className="app-logo">
                 <img src="images\lendsqr-logo.svg" />
             </div>
@@ -31,7 +31,21 @@ const SideNavbar = () => {
                 }
             </div>
         </div>
-        <div className={`side-navbar`}>
+        <div className={`side-navbar ${menuOpened ? "open-sidebar" : "close-sidebar"}`}>
+            <div className="user-mobile">
+                <div className="side-1">
+                    <div className="avatar">
+                        <img src="images\profile-pic.svg" />
+                    </div>
+                    <div className="username">Adedeji</div>
+                    <img src="icons\pageHeader\caret-down.svg" className="caret-down" />
+                </div>
+                <div className="side-2">
+                    <span>Docs</span>
+                    <img src="icons\pageHeader\notification-bell.svg" className="notification-bell" />
+                </div>
+            </div>
+            
             <div className="top-section">
                 <div className="dropdown">
                     <img src="icons\sideNavbar\switch-organization.svg" alt="" />

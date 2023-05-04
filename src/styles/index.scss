@@ -294,6 +294,10 @@ h1 {
     }
 }
 
+.user-page-header {
+    display: none;
+}
+
 /* Side Navigation Bar */
 .side-navbar {
     height: 100%;
@@ -303,6 +307,10 @@ h1 {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
     overflow-y: scroll;
     z-index: 999999;
+
+    .user-mobile {
+        display: none;
+    }
 
     .menu-buttons {
         position: absolute;

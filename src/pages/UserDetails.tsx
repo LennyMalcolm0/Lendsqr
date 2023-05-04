@@ -9,9 +9,9 @@ const UserDetailsPage = () => {
 
     return (  
         <div className="dashboard">
-            {/* <PageHeader /> */}
+            <PageHeader />
             <div className="page-body">
-                {/* <SideNavbar /> */}
+                <SideNavbar />
                 <div className="main-content">
                     <div className="container">
 

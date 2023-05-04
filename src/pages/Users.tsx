@@ -5,35 +5,6 @@ import SideNavbar from "../layouts/sideNavbar";
 import { useState, useEffect } from 'react';
 
 const UsersPage = () => {
-    const [sideNavbarOpened, setsideNavbarOpened] = useState(false);
-
-    // Functions are in sync with that of page header component
-
-    const openSideNavbar = () => {
-        return true
-        // const sideNavbar = document.querySelector(".side-navbar") as HTMLElement;
-        // sideNavbar.style.display = "block";
-    };
-    const closeSideNavbar = () => {
-        return false
-        // const sideNavbar = document.querySelector(".side-navbar") as HTMLElement;
-        // sideNavbar.style.display = "none";
-    };
-
-    // useEffect(() => {
-    //     const menuButtons = document.querySelectorAll(".menu-buttons img") as NodeListOf<HTMLElement>;
-    //     if (menuButtons[0] && menuButtons[1]) {      
-    //         menuButtons[0].addEventListener("click", () => {
-    //             setsideNavbarOpened(false)
-    //             console.log("sideNavbarOpened")
-    //         });
-    //         menuButtons[1].addEventListener("click", () => {
-    //             setsideNavbarOpened(true)
-    //             console.log("fsgfgrfhrf")
-    //         });  
-    //     }
-    // }, []);
-
     return ( 
         <div className="dashboard">
             <PageHeader  />

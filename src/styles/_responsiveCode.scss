@@ -434,21 +434,15 @@
     }
     
     .page-header { 
-        padding: 0 15px;
-        .search-bar, .content {
-            display: none;
-        }
-
-        .menu-buttons {
-            display: block;
-
-            img {
-                height: 35px;
-            }
-        }
+        display: none;
     }
 
     .dashboard .page-body {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        display: block;
+
         h1 {
             font-size: 20px;
         }
@@ -459,6 +453,45 @@
         top: 60px;
         width: 100vw;
         padding-bottom: 60px;
+
+        .top-section .dropdown {
+            height: 20px;
+        }
+
+        .user-mobile {
+            height: 50px;
+            width: 100%;
+            padding: 0 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+            @include spaceBetweenContents();
+
+            .side-1, .side-2 {
+                display: flex;
+                align-items: center;
+
+                .avatar {
+                    height: 32px;
+                    width: 32px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    object-fit: cover;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                span {
+                    text-decoration: underline;
+                }
+
+                .notification-bell {
+                    margin-left: 10px;
+                    scale: 0.9;
+                }
+            }
+        }
 
         .menu-buttons {
             display: block;
@@ -475,6 +508,14 @@
         }
 
         
+    }
+
+    .user-page-header {
+        height: 60px;
+        padding: 0 20px;
+        box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        @include spaceBetweenContents();
     }
 
     .dashboard .page-body {

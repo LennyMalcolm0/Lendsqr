@@ -298,6 +298,10 @@ h1 {
   display: none;
 }
 
+.user-page-header {
+  display: none;
+}
+
 /* Side Navigation Bar */
 .side-navbar {
   height: 100%;
@@ -307,6 +311,9 @@ h1 {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   overflow-y: scroll;
   z-index: 999999;
+}
+.side-navbar .user-mobile {
+  display: none;
 }
 .side-navbar .menu-buttons {
   position: absolute;
@@ -1202,16 +1209,13 @@ h1 {
     margin-top: 80px;
   }
   .page-header {
-    padding: 0 15px;
-  }
-  .page-header .search-bar, .page-header .content {
     display: none;
   }
-  .page-header .menu-buttons {
+  .dashboard .page-body {
+    position: absolute;
+    inset: 0;
+    height: 100%;
     display: block;
-  }
-  .page-header .menu-buttons img {
-    height: 35px;
   }
   .dashboard .page-body h1 {
     font-size: 20px;
@@ -1222,6 +1226,41 @@ h1 {
     width: 100vw;
     padding-bottom: 60px;
   }
+  .side-navbar .top-section .dropdown {
+    height: 20px;
+  }
+  .side-navbar .user-mobile {
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .side-navbar .user-mobile .side-1, .side-navbar .user-mobile .side-2 {
+    display: flex;
+    align-items: center;
+  }
+  .side-navbar .user-mobile .side-1 .avatar, .side-navbar .user-mobile .side-2 .avatar {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .side-navbar .user-mobile .side-1 .avatar img, .side-navbar .user-mobile .side-2 .avatar img {
+    width: 100%;
+  }
+  .side-navbar .user-mobile .side-1 span, .side-navbar .user-mobile .side-2 span {
+    text-decoration: underline;
+  }
+  .side-navbar .user-mobile .side-1 .notification-bell, .side-navbar .user-mobile .side-2 .notification-bell {
+    margin-left: 10px;
+    scale: 0.9;
+  }
   .side-navbar .menu-buttons {
     display: block;
   }
@@ -1230,6 +1269,15 @@ h1 {
   }
   .side-navbar .nav-items-category, .side-navbar .nav-item {
     padding-left: 20px;
+  }
+  .user-page-header {
+    height: 60px;
+    padding: 0 20px;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .dashboard .page-body .main-content {
     width: 100%;
