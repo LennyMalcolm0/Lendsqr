@@ -1,7 +1,7 @@
 import UsersSummary from "../components/usersSummary";
 import UserData from "../components/userData";
 import PageHeader from "../layouts/PageHeader";
-import SideNavbar from "../layouts/sideBar";
+import SideNavbar from "../layouts/sideNavbar";
 
 const UsersPage = () => {
     return ( 

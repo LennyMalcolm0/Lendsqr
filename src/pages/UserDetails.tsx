@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import UserDetailSummary from "../components/userDetailSummary";
 import UserInformation from "../components/userInformation";
 import PageHeader from "../layouts/PageHeader";
-import SideNavbar from "../layouts/sideBar";
+import SideNavbar from "../layouts/sideNavbar";
 
 const UserDetailsPage = () => {
     const navigateHistory = useNavigate();
