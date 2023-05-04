@@ -26,6 +26,14 @@ Lendsqr's platform is designed to be easy to use and implement. Here's how it wo
 
 4. **Reporting and Analytics**: Our platform provides detailed reporting and analytics that enable you to monitor the performance of your lending portfolio.
 
+## Installation
+
+Run `npm install` or `npm i` on your terminal to install all dependencies.
+
+## Tech Stack
+
+**Client:** React, TypeScript, SASS
+
 ## Getting Started
 
-To get started with Lendsqr's digital lending platform, simply sign up for an account on our website. Our team will work with you to configure the platform according to your business needs.
+To get started with Lendsqr's digital lending platform, simply sign up for an account on our website (https://lendsqr.com/). Our team will work with you to configure the platform according to your business needs.
