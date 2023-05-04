@@ -19,7 +19,7 @@
     }
 
     .dashboard .page-body {
-        height: calc(100vh - 60px);
+        height: 100vh;
 
         .main-content {
             width: calc(100% - 250px);
@@ -215,6 +215,8 @@
     }
 
     .dashboard .page-body {
+        padding-bottom: 50px;
+
         h1 {
             font-size: 22px;
         }
@@ -557,6 +559,10 @@
 
     .user-details {
         padding-bottom: 30px;
+    }
+
+    .user-information {
+        word-break: break-all;
     }
 }
 

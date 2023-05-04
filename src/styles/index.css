@@ -59,19 +59,6 @@ input:focus {
   border-color: #39CDCC;
 }
 
-::-webkit-scrollbar {
-  width: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: whitesmoke;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 25px;
-  background-color: #545F7D;
-}
-
 h1 {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -908,7 +895,7 @@ h1 {
     font-size: 14px;
   }
   .dashboard .page-body {
-    height: calc(100vh - 60px);
+    height: 100vh;
   }
   .dashboard .page-body .main-content {
     width: calc(100% - 250px);
@@ -1041,6 +1028,9 @@ h1 {
   }
   .side-navbar {
     padding-bottom: 0;
+  }
+  .dashboard .page-body {
+    padding-bottom: 50px;
   }
   .dashboard .page-body h1 {
     font-size: 22px;
@@ -1309,6 +1299,9 @@ h1 {
   .user-details {
     padding-bottom: 30px;
   }
+  .user-information {
+    word-break: break-all;
+  }
 }
 .open-sidebar {
   animation: openSidebar 0.5s ease 0s 1 normal forwards;
@@ -1333,4 +1326,16 @@ h1 {
   to {
     left: -100%;
   }
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #545F7D;
 }

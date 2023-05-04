@@ -17,9 +17,23 @@ const UserData = () => {
 
     const [start, setStart] = useState(0);
     const [end, setEnd] = useState(10);
-    const {data, loading} = useFetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users');
+    const {data} = useFetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users');
 
-    const formatDate = (createdAt: string) => {
+    if (data) {
+        localStorage.setItem("usersData", JSON.stringify(data));
+    }
+
+    const [retrievedUserData, setRetrievedData] = useState<any>();
+    useEffect(() => {
+        const dataJson = localStorage.getItem("usersData");
+        if (dataJson !== null) {
+            setRetrievedData(JSON.parse(dataJson));
+            console.log(retrievedUserData)
+        }
+    }, []);
+
+    // Function for formatting unreadable dates from usersData API to one that is readable
+    function formatDate(createdAt: string) {
         const createdAtDate = new Date(createdAt);
         const formattedDate = createdAtDate.toLocaleString('en-US', {
             month: 'long',
@@ -41,7 +55,7 @@ const UserData = () => {
                         {headers.map((value, index) => (
                             <div key={index} className="header">
                                 <span>{value.toUpperCase()}</span>
-                                <img src="icons\userData\filter.svg" alt="" onClick={openFilter} />
+                                <img src="http://localhost:5173/icons\userData\filter.svg" alt="" onClick={openFilter} />
                                 <div className="filter-container">
                                     <FilterUsers />
                                 </div>
@@ -49,8 +63,8 @@ const UserData = () => {
                         ))}
                     </div>
                     <div className="users-info">
-                        {!loading &&
-                            data
+                        {retrievedUserData &&
+                            retrievedUserData
                                 .filter((user: any) => user.id >= start && user.id <= end) 
                                 .map((user: any) => (
                                     <div key={user.id}>
@@ -74,19 +88,19 @@ const UserData = () => {
                     <span>Showing</span>
                     <span className="dropdown">
                         <span>100</span>
-                        <img src="icons\userData\arrow.svg" alt="" />
+                        <img src="http://localhost:5173/icons\userData\arrow.svg" alt="" />
                     </span>
                     <span>out of 100</span>
                 </div>
                 <div className="pagination">
-                    <div><img src="icons\userData\arrow.svg" alt="" /></div>
+                    <div><img src="http://localhost:5173/icons\userData\arrow.svg" alt="" /></div>
                     <span className="active">1</span>
                     <span>2</span>
                     <span>3</span>
                     <span>...</span>
                     <span>9</span>
                     <span>10</span>
-                    <div><img src="icons\userData\arrow.svg" alt="" /></div>
+                    <div><img src="http://localhost:5173/icons\userData\arrow.svg" alt="" /></div>
                 </div>
             </div>
         </div>

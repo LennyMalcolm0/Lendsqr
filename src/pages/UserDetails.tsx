@@ -17,7 +17,7 @@ const UserDetailsPage = () => {
 
                         <div className="user-details">
                             <div className="go-back" onClick={() => navigateHistory(-1)}>
-                                <img src="icons\userData\go-back.svg" alt="" />
+                                <img src="http://localhost:5173/icons\userData\go-back.svg" alt="" />
                                 <span>Back to Users</span>
                             </div>
                             <div className="page-heading">

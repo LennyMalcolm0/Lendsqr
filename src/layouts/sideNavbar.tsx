@@ -3,10 +3,6 @@ import NavLinksCategory from "../components/navLinksCategory";
 import { customerCategoryItems, businessCategoryItems, settingsCategoryItems } from "./data";
 import { useState } from 'react';
 
-interface Props {
-    displaySidebar: () => boolean;
-    removeSidebar: () => boolean;
-}
 const SideNavbar = () => {
     const [menuOpened, setMenuOpened] = useState(false);
 
@@ -21,39 +17,40 @@ const SideNavbar = () => {
         <>
          <div className="user-page-header">
             <div className="app-logo">
-                <img src="images\lendsqr-logo.svg" />
+                <img src="http://localhost:5173/images\lendsqr-logo.svg" />
             </div>
 
             <div className="menu-buttons">
                 {!menuOpened ? 
-                    <img src="icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
-                    <img src="icons\pageHeader\close-menu.svg" onClick={closeMenu} />
+                    <img src="http://localhost:5173/icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
+                    <img src="http://localhost:5173/icons\pageHeader\close-menu.svg" onClick={closeMenu} />
                 }
             </div>
         </div>
+        
         <div className={`side-navbar ${menuOpened ? "open-sidebar" : "close-sidebar"}`}>
             <div className="user-mobile">
                 <div className="side-1">
                     <div className="avatar">
-                        <img src="images\profile-pic.svg" />
+                        <img src="http://localhost:5173/images\profile-pic.svg" />
                     </div>
                     <div className="username">Adedeji</div>
-                    <img src="icons\pageHeader\caret-down.svg" className="caret-down" />
+                    <img src="http://localhost:5173/icons\pageHeader\caret-down.svg" className="caret-down" />
                 </div>
                 <div className="side-2">
                     <span>Docs</span>
-                    <img src="icons\pageHeader\notification-bell.svg" className="notification-bell" />
+                    <img src="http://localhost:5173/icons\pageHeader\notification-bell.svg" className="notification-bell" />
                 </div>
             </div>
             
             <div className="top-section">
                 <div className="dropdown">
-                    <img src="icons\sideNavbar\switch-organization.svg" alt="" />
+                    <img src="http://localhost:5173/icons\sideNavbar\switch-organization.svg" alt="" />
                     <span>Switch Organization</span>
-                    <img src="icons\sideNavbar\dropdown.svg" alt="" />
+                    <img src="http://localhost:5173/icons\sideNavbar\dropdown.svg" alt="" />
                 </div>
                 <div>
-                    <img src="icons\sideNavbar\dashboard.svg" alt="" />
+                    <img src="http://localhost:5173/icons\sideNavbar\dashboard.svg" alt="" />
                     <span>Dashboard</span>
                 </div>
             </div>
@@ -66,7 +63,7 @@ const SideNavbar = () => {
 
             <div className="bottom-section">
                 <Link to="/login" className="nav-item">
-                    <img src="icons\sideNavbar\switch-organization.svg" alt="" />
+                    <img src="http://localhost:5173/icons\sideNavbar\switch-organization.svg" alt="" />
                     <span>Logout</span>
                     <div className="dim-background"></div>
                 </Link>
