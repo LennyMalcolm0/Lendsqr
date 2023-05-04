@@ -1,11 +1,22 @@
+import React, { useState } from "react";
+
 const PageHeader = () => {
+    const [menuOpened, setMenuOpened] = useState(false);
+
+    const openMenu = () => {
+        setMenuOpened(true);
+    };
+    const closeMenu = () => {
+        setMenuOpened(false);
+    };
+
     return (  
         <div className="page-header">
             <div className="app-logo">
                 <img src="images\lendsqr-logo.svg" />
             </div>
 
-            <div className="search-bar smaller-screens">
+            <div className="search-bar sm-search-bar">
                 <input type="text" placeholder="Search for anything" />
                 <span>
                     <img src="icons\pageHeader\search-icon.svg" />
@@ -34,7 +45,12 @@ const PageHeader = () => {
                 </div>
             </div>
 
-            <img src="icons\pageHeader\menu-button.svg" className="menu-button" />
+            <div className="menu-buttons">
+                {!menuOpened ? 
+                    <img src="icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
+                    <img src="icons\pageHeader\close-menu.svg" onClick={closeMenu} />
+                }
+            </div>
         </div>
     );
 }

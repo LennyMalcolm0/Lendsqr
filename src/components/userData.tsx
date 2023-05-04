@@ -35,35 +35,37 @@ const UserData = () => {
     
     return (  
         <div className="users-data">
-            <div className="table">
-                <div className="headers">
-                    {headers.map((value, index) => (
-                        <div key={index} className="header">
-                            <span>{value.toUpperCase()}</span>
-                            <img src="icons\userData\filter.svg" alt="" onClick={openFilter} />
-                            <div className="filter-container">
-                                <FilterUsers />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="users-info">
-                    {!loading &&
-                        data
-                            .filter((user: any) => user.id >= start && user.id <= end) 
-                            .map((user: any) => (
-                                <div key={user.id}>
-                                    <UserSnippet 
-                                        userId={user.id}
-                                        organization={user.orgName}
-                                        username={user.userName}
-                                        email={user.email}
-                                        phoneNumber={user.profile.phoneNumber}
-                                        dateJoined={formatDate(user.createdAt)}
-                                    />
+            <div className="table-container">
+                <div className="table">
+                    <div className="headers">
+                        {headers.map((value, index) => (
+                            <div key={index} className="header">
+                                <span>{value.toUpperCase()}</span>
+                                <img src="icons\userData\filter.svg" alt="" onClick={openFilter} />
+                                <div className="filter-container">
+                                    <FilterUsers />
                                 </div>
-                            ))
-                    }
+                            </div>
+                        ))}
+                    </div>
+                    <div className="users-info">
+                        {!loading &&
+                            data
+                                .filter((user: any) => user.id >= start && user.id <= end) 
+                                .map((user: any) => (
+                                    <div key={user.id}>
+                                        <UserSnippet 
+                                            userId={user.id}
+                                            organization={user.orgName}
+                                            username={user.userName}
+                                            email={user.email}
+                                            phoneNumber={user.profile.phoneNumber}
+                                            dateJoined={formatDate(user.createdAt)}
+                                        />
+                                    </div>
+                                ))
+                        }
+                    </div>
                 </div>
             </div>
             
@@ -78,12 +80,12 @@ const UserData = () => {
                 </div>
                 <div className="pagination">
                     <div><img src="icons\userData\arrow.svg" alt="" /></div>
-                    <a className="active" href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
+                    <span className="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
                     <span>...</span>
-                    <a href="#">15</a>
-                    <a href="#">16</a>
+                    <span>9</span>
+                    <span>10</span>
                     <div><img src="icons\userData\arrow.svg" alt="" /></div>
                 </div>
             </div>

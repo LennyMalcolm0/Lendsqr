@@ -3,11 +3,11 @@ import { customerCategoryItems, businessCategoryItems, settingsCategoryItems } f
 
 const SideNavbar = () => {
     return (  
-        <div className="side-bar">
+        <div className="side-navbar">
             <div className="top-section">
                 <div className="dropdown">
                     <img src="icons\sideNavbar\switch-organization.svg" alt="" />
-                    <span>Swith Organization</span>
+                    <span>Switch Organization</span>
                     <img src="icons\sideNavbar\dropdown.svg" alt="" />
                 </div>
                 <div>

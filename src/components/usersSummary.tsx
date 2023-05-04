@@ -26,11 +26,13 @@ const UsersSummary = () => {
         <div className="users-summary">
             {dataSummary.map((summary, index) => (
                 <div key={index} className="card">
-                    <div className="image-container">
-                        <img src={summary.imageSource} alt="" />
-                        <div className="background"></div>
+                    <div>
+                        <div className="image-container">
+                            <img src={summary.imageSource} alt="" />
+                            <div className="background"></div>
+                        </div>
+                        <div className="title">{summary.title.toUpperCase()}</div>
                     </div>
-                    <div className="title">{summary.title.toUpperCase()}</div>
                     <div className="value">{summary.value}</div>
                 </div>
             ))}

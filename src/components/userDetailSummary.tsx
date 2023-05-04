@@ -3,23 +3,27 @@ const UserDetailSummary = () => {
     return (  
         <div className="user-detail-summary">
             <div className="profile">
-                <div className="avatar">
-                    <img src="images\profile-pic.svg" alt="" />
+                <div className="section-1">
+                    <div className="avatar">
+                        <img src="images\profile-pic.svg" alt="" />
+                    </div>
+
+                    <span>
+                        <div className="name">Grace Effiom</div>
+                        <div className="account-number">LSQFf587g90</div>
+                    </span>
                 </div>
 
-                <span>
-                    <div className="name">Grace Effiom</div>
-                    <div className="account-number">LSQFf587g90</div>
-                </span>
+                <div className="section-2">
+                    <span className="tier">
+                        <img src="icons\userData\tier.svg" alt="" />
+                    </span>
 
-                <span className="tier">
-                    <img src="icons\userData\tier.svg" alt="" />
-                </span>
-
-                <span>
-                    <div className="account-balance">₦200,000.00</div>
-                    <div className="bank-name">9912345678/Providus Bank</div>
-                </span>
+                    <span>
+                        <div className="account-balance">₦200,000.00</div>
+                        <div className="bank-name">9912345678/Providus Bank</div>
+                    </span>
+                </div>
             </div>
 
             <div className="user-nav-links">

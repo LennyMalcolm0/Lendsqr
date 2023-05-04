@@ -104,7 +104,6 @@ const UserInformation = () => {
                         <div className="item-value">07060780922</div>
                     </div>
                 </div>
-                <div className="base-line"></div>
             </div>
         </div>
     );
