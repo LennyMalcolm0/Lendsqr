@@ -14,7 +14,7 @@ const UsersPage = () => {
                         <div className="search-bar sm-search-bar">
                             <input type="text" placeholder="Search for anything" />
                             <span>
-                                <img src="http://localhost:5173/icons\pageHeader\search-icon.svg" />
+                                <img src="icons\pageHeader\search-icon.svg" />
                             </span>
                         </div>
                         <h1>Users</h1>

@@ -24,7 +24,7 @@ const UserDetailSummary = () => {
 
                 <div className="section-2">
                     <span className="tier">
-                        <img src="http://localhost:5173/icons\userData\tier.svg" alt="" />
+                        <img src="icons\userData\tier.svg" alt="" />
                     </span>
 
                     <span>

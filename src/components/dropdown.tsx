@@ -22,7 +22,7 @@ const Dropdown = ({dropdownItems}: Props) => {
         <div className="drop-down">
             <div className="main-display" onClick={openDropdown}>
                 <div className="current-value">Select</div>
-                <img src="http://localhost:5173/icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />
+                <img src="icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />
             </div>
             {dropdownOpened &&
                 <div className="select-items">

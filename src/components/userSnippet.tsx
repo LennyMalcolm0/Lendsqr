@@ -28,20 +28,20 @@ const UserSnippet = ({organization, username, email, phoneNumber, dateJoined, us
                     <span className="background"></span>
                     <span className="status">Inactive</span>
                 </span>
-                <img src="http://localhost:5173/icons\userData\details.svg" alt="" onClick={openMenu} />
+                <img src="icons\userData\details.svg" alt="" onClick={openMenu} />
 
                 {openedMenu &&
                     <div className="menu">
                         <Link to={`/user-details/${userId}`} className="item">
-                            <img src="http://localhost:5173/icons\userData\eye.svg" alt="" />
+                            <img src="icons\userData\eye.svg" alt="" />
                             <span>View Details</span>
                         </Link>
                         <div className="item">
-                            <img src="http://localhost:5173/icons\userData\blacklist.svg" alt="" />
+                            <img src="icons\userData\blacklist.svg" alt="" />
                             <span>Blacklist User</span>
                         </div>
                         <div className="item">
-                            <img src="http://localhost:5173/icons\userData\activate.svg" alt="" />
+                            <img src="icons\userData\activate.svg" alt="" />
                             <span>Activate User</span>
                         </div>
                     </div>
