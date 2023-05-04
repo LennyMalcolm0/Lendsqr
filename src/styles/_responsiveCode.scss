@@ -19,7 +19,6 @@
     }
 
     .dashboard .page-body {
-        height: 100vh;
 
         .main-content {
             width: calc(100% - 250px);
@@ -77,6 +76,22 @@
 
     .user-snippet {
         font-size: 12px;
+
+        .category .menu {
+            left: 0;
+
+            .item {
+                width: 140px;
+                padding: 12px 0;
+                font-size: 12px;
+                white-space: nowrap;
+
+                img {
+                    margin: 0 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     .user-details {
@@ -130,7 +145,48 @@
     }
 
     .filter {
-        scale: 0.8;
+        width: 220px;
+        padding: 20px 15px;
+        font-size: 12px;
+        line-height: 14px;
+
+        input {
+            height: 30px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+
+            button {
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .drop-down {
+        font-size: 12px;
+        line-height: 14px;
+
+        .main-display {
+            height: 30px;
+        }
+
+        .select-items {
+            top: 40px;
+    
+            .dropdown-item {
+                width: 100%;
+                padding: 10px 15px;
+                @include flexStart();
+                color: $secondary;
+            }
+    
+            .dropdown-item:hover {
+                background: rgba(33, 63, 125, 0.1);
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -215,7 +271,7 @@
     }
 
     .dashboard .page-body {
-        padding-bottom: 50px;
+        height: calc(100vh - 60px);
 
         h1 {
             font-size: 22px;
@@ -229,6 +285,10 @@
             .table {
                 min-width: 1100px;
                 padding: 25px;
+
+                .headers .header .filter-container {
+                    left: -4%;
+                }
             }
         }
     }
@@ -443,6 +503,7 @@
         position: absolute;
         inset: 0;
         height: 100%;
+        padding-bottom: 50px;
         display: block;
 
         h1 {

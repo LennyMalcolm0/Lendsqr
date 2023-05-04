@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import FilterUsers from "./filterUsers";
 import UserSnippet from "./userSnippet";
 import { useFetch } from "../hooks/useFetch";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const UserData = () => {
     const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ]
@@ -13,7 +14,7 @@ const UserData = () => {
         if (filterContainer) {
             filterContainer.style.display = `${filterContainer.style.display === "block" ? "none" : "block"}`
         }
-    }
+    };
 
     const [start, setStart] = useState(0);
     const [end, setEnd] = useState(10);

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import UserDetailSummary from "../components/userDetailSummary";
 import UserInformation from "../components/userInformation";
-import PageHeader from "../layouts/pageHeader";
-import SideNavbar from "../layouts/sideNavbar";
+import PageHeader from "../layouts/PageHeader";
+import SideNavbar from "../layouts/SideNavbar";
 
 const UserDetailsPage = () => {
     const navigateHistory = useNavigate();

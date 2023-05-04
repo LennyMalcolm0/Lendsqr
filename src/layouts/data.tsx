@@ -1,92 +1,92 @@
 export const customerCategoryItems = [
     {
-        imageSource: "icons/sideNavbar/customers/users.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/users.svg",
         linkText: "Users"
     },
     {
-        imageSource: "icons/sideNavbar/customers/guarantors.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/guarantors.svg",
         linkText: "Guarantors"
     },
     {
-        imageSource: "icons/sideNavbar/customers/loans.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/loans.svg",
         linkText: "Loans"
     },
     {
-        imageSource: "icons/sideNavbar/customers/decision-models.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/decision-models.svg",
         linkText: "Decision Models"
     },
     {
-        imageSource: "icons/sideNavbar/customers/savings.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/savings.svg",
         linkText: "Savings"
     },
     {
-        imageSource: "icons/sideNavbar/customers/loan-requests.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/loan-requests.svg",
         linkText: "Loan Requests"
     },
     {
-        imageSource: "icons/sideNavbar/customers/whitelist.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/whitelist.svg",
         linkText: "Whitelist"
     },
     {
-        imageSource: "icons/sideNavbar/customers/karma.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/customers/karma.svg",
         linkText: "Karma"
     },
 ];
 
 export const businessCategoryItems = [
     {
-        imageSource: "icons/sideNavbar/businesses/organization.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/organization.svg",
         linkText: "Organization"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/loan-products.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/loan-products.svg",
         linkText: "Loan Products"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/savings-products.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/savings-products.svg",
         linkText: "Savings Products"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/charges.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/charges.svg",
         linkText: "Fees and Charges"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/transactions.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/transactions.svg",
         linkText: "Transactions"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/services.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/services.svg",
         linkText: "Services"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/service-account.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/service-account.svg",
         linkText: "Service Account"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/settlements.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/settlements.svg",
         linkText: "Settlements"
     },
     {
-        imageSource: "icons/sideNavbar/businesses/reports.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/businesses/reports.svg",
         linkText: "Reports"
     },
 ];
 
 export const settingsCategoryItems = [
     {
-        imageSource: "icons/sideNavbar/settings/preferences.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/settings/preferences.svg",
         linkText: "Preferences"
     },
     {
-        imageSource: "icons/sideNavbar/settings/pricing.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/settings/pricing.svg",
         linkText: "Fees and Pricing"
     },
     {
-        imageSource: "icons/sideNavbar/settings/audit-logs.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/settings/audit-logs.svg",
         linkText: "Audit Logs"
     },
     {
-        imageSource: "icons/sideNavbar/settings/system-messages.svg",
+        imageSource: "http://localhost:5173/icons/sideNavbar/settings/system-messages.svg",
         linkText: "Systems Messages"
     },
 ];

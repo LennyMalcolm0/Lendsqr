@@ -67,6 +67,20 @@ h1 {
   font-weight: 500;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #545F7D;
+}
+
 .search-bar {
   height: 40px;
   width: 400px;
@@ -212,6 +226,7 @@ h1 {
 .page-header {
   width: 100%;
   height: 80px;
+  background: white;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
@@ -293,7 +308,7 @@ h1 {
 .side-navbar {
   height: 100%;
   width: 280px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   background: white;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   overflow-y: scroll;
@@ -381,6 +396,7 @@ h1 {
 }
 .users-summary .card {
   padding: 20px 30px;
+  background: white;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
@@ -446,6 +462,7 @@ h1 {
 .users-data .table-container .table {
   width: 100%;
   padding: 35px 30px;
+  background: white;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
@@ -472,7 +489,7 @@ h1 {
 .users-data .table-container .table .headers .header .filter-container {
   position: absolute;
   top: 30px;
-  left: -60px;
+  left: -35%;
   display: none;
   z-index: 999999;
 }
@@ -583,7 +600,7 @@ h1 {
 .user-snippet .category .menu {
   position: absolute;
   top: 50px;
-  left: 60px;
+  left: 50px;
   padding: 5px 0;
   background: white;
   border: 1px solid rgba(84, 95, 125, 0.04);
@@ -600,7 +617,6 @@ h1 {
   color: #545F7D;
   font-size: 14px;
   font-weight: 500;
-  line-height: 16px;
 }
 .user-snippet .category .menu .item img {
   margin-left: 20px;
@@ -633,7 +649,6 @@ h1 {
   border-radius: 4px;
   color: #545F7D;
   font-size: 14px;
-  line-height: 16px;
 }
 .filter label {
   font-weight: 500;
@@ -764,7 +779,7 @@ h1 {
   width: 100%;
   padding: 0 30px;
   padding-top: 20px;
-  background: #FFFFFF;
+  background: white;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
@@ -846,10 +861,11 @@ h1 {
   padding: 30px;
   padding-top: 0;
   margin-top: 30px;
-  background: #FFFFFF;
+  background: white;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+  word-break: break-all;
 }
 .user-information .section-name {
   margin-top: 30px;
@@ -894,9 +910,6 @@ h1 {
     width: 250px;
     font-size: 14px;
   }
-  .dashboard .page-body {
-    height: 100vh;
-  }
   .dashboard .page-body .main-content {
     width: calc(100% - 250px);
   }
@@ -933,6 +946,19 @@ h1 {
   .user-snippet {
     font-size: 12px;
   }
+  .user-snippet .category .menu {
+    left: 0;
+  }
+  .user-snippet .category .menu .item {
+    width: 140px;
+    padding: 12px 0;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .user-snippet .category .menu .item img {
+    margin: 0 12px;
+    margin-right: 10px;
+  }
   .user-details .go-back {
     margin-top: 30px;
   }
@@ -963,7 +989,42 @@ h1 {
     font-size: 14px;
   }
   .filter {
-    scale: 0.8;
+    width: 220px;
+    padding: 20px 15px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .filter input {
+    height: 30px;
+  }
+  .filter .buttons {
+    margin-top: 20px;
+  }
+  .filter .buttons button {
+    height: 30px;
+    font-size: 12px;
+  }
+  .drop-down {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .drop-down .main-display {
+    height: 30px;
+  }
+  .drop-down .select-items {
+    top: 40px;
+  }
+  .drop-down .select-items .dropdown-item {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #545F7D;
+  }
+  .drop-down .select-items .dropdown-item:hover {
+    background: rgba(33, 63, 125, 0.1);
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -1030,7 +1091,7 @@ h1 {
     padding-bottom: 0;
   }
   .dashboard .page-body {
-    padding-bottom: 50px;
+    height: calc(100vh - 60px);
   }
   .dashboard .page-body h1 {
     font-size: 22px;
@@ -1041,6 +1102,9 @@ h1 {
   .users-data .table-container .table {
     min-width: 1100px;
     padding: 25px;
+  }
+  .users-data .table-container .table .headers .header .filter-container {
+    left: -4%;
   }
   .user-snippet {
     font-size: 12px;
@@ -1205,6 +1269,7 @@ h1 {
     position: absolute;
     inset: 0;
     height: 100%;
+    padding-bottom: 50px;
     display: block;
   }
   .dashboard .page-body h1 {
@@ -1326,16 +1391,4 @@ h1 {
   to {
     left: -100%;
   }
-}
-::-webkit-scrollbar {
-  width: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: whitesmoke;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 25px;
-  background-color: #545F7D;
 }
