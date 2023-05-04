@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+interface Props {
+    openSideNavbar: () => boolean;
+    closeSideNavbar: () => boolean;
+}
 const PageHeader = () => {
     const [menuOpened, setMenuOpened] = useState(false);
 
@@ -45,12 +49,12 @@ const PageHeader = () => {
                 </div>
             </div>
 
-            <div className="menu-buttons">
+            {/* <div className="menu-buttons">
                 {!menuOpened ? 
                     <img src="icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
                     <img src="icons\pageHeader\close-menu.svg" onClick={closeMenu} />
                 }
-            </div>
+            </div> */}
         </div>
     );
 }

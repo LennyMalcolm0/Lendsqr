@@ -1,33 +1,7 @@
-@media screen and (max-width: 1100px) {
-    .login-page {
-        .lendsqr-logo {
-            top: 40px;
-            left: 30px;
-        }
-
-        .image-2d img {
-            width: 100%;
-        }
-
-        .center-form {
-            width: min(85%, 450px);
-            margin: 0 auto;        
-        
-            form {
-                width: min(100%, 450px);
-                padding: 0;
-            } 
-        }
-    }
-
+@media screen and (max-width: 1300px) {
     .page-header {
-        height: 60px;
-        padding: 0 30px;
-        justify-content: space-between;
-
         .app-logo {
-            width: fit-content;
-            padding: 0;
+            width: 250px;
 
             img {
                 height: 25px;
@@ -35,51 +9,12 @@
         }
 
         .content {
-            width: fit-content;
-            justify-content: flex-start;
-
-            .content-container {
-                width: 100%;
-            }
-
-            .search-bar {
-                display: none;
-            }
-        }
-
-        .search-bar {
-            height: 35px;
-            width: 300px;
-
-            span {
-                width: 50px;
-            }
-        }
-
-        .sm-search-bar {
-            display: flex;
-        }
-
-        .user {
-            font-size: 14px;
-
-            .notification-bell {
-                height: 20px;
-            }
-
-            .avatar {
-                height: 40px;
-                width: 40px;
-            }
-
-            .profile div {
-                font-size: 12px;
-            }
+            width: calc(100% - 250px);
         }
     }
 
     .side-navbar {
-        width: 240px;
+        width: 250px;
         font-size: 14px;
     }
 
@@ -87,7 +22,7 @@
         height: calc(100vh - 60px);
 
         .main-content {
-            width: calc(100% - 240px);
+            width: calc(100% - 250px);
         }
     }
 
@@ -107,19 +42,14 @@
     }
 
     .users-data {
-        .table-container {
-            overflow-x: scroll;
+        .table-container .table {
 
-            .table {
-                min-width: 1100px;
+            .headers .header {
+                font-size: 10px;
+                line-height: 12px;
 
-                .headers .header {
-                    font-size: 10px;
-                    line-height: 12px;
-
-                    img {
-                        scale: 0.8;
-                    }
+                img {
+                    scale: 0.8;
                 }
             }
         }
@@ -133,161 +63,7 @@
             }
 
             .pagination {
-                div {
-                    padding: 3px;
 
-                    img {
-                        scale: 0.8;
-                    }
-                }
-            }
-        }
-    }
-
-    .user-snippet {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .login-page {
-        .lendsqr-logo {
-            top: 40px;
-            left: 30px;
-        }
-
-        .image-2d img {
-            width: 100%;
-        }
-
-        .center-form {
-            width: min(85%, 450px);
-            margin: 0 auto;        
-        
-            form {
-                width: min(100%, 450px);
-                padding: 0;
-            } 
-        }
-    }
-
-    .page-header {
-        height: 60px;
-        padding: 0 30px;
-        justify-content: space-between;
-
-        .app-logo {
-            width: fit-content;
-            padding: 0;
-
-            img {
-                height: 25px;
-            }
-        }
-
-        .content {
-            width: fit-content;
-            justify-content: flex-start;
-
-            .content-container {
-                width: 100%;
-            }
-
-            .search-bar {
-                display: none;
-            }
-        }
-
-        .search-bar {
-            height: 35px;
-            width: 300px;
-
-            span {
-                width: 50px;
-            }
-        }
-
-        .sm-search-bar {
-            display: flex;
-        }
-
-        .user {
-            font-size: 14px;
-
-            .notification-bell {
-                height: 20px;
-            }
-
-            .avatar {
-                height: 40px;
-                width: 40px;
-            }
-
-            .profile div {
-                font-size: 12px;
-            }
-        }
-    }
-
-    .side-navbar {
-        width: 240px;
-        font-size: 14px;
-    }
-
-    .dashboard .page-body {
-        height: calc(100vh - 60px);
-
-        .main-content {
-            width: calc(100% - 240px);
-
-            h1 {
-                font-size: 22px;
-            }
-        }
-    }
-
-    .users-summary {
-        .card {
-            padding: 20px;
-            
-            .title {
-                font-size: 12px;
-            }
-
-            .value {
-                align-self: baseline;
-                font-size: 20px;
-            }
-        }
-    }
-
-    .users-data {
-        .table-container {
-            overflow-x: scroll;
-
-            .table {
-                min-width: 1100px;
-
-                .headers .header {
-                    font-size: 10px;
-                    line-height: 12px;
-
-                    img {
-                        scale: 0.8;
-                    }
-                }
-            }
-        }
-
-        .controller {
-            font-size: 14px;
-
-            .current-display {
-                font-size: 12px;
-                line-height: 14px;
-            }
-
-            .pagination {
                 div {
                     padding: 3px;
 
@@ -329,6 +105,137 @@
     }
 
     .user-detail-summary {
+        .profile {
+
+            .avatar {
+                height: 80px;
+                width: 80px;
+            }
+
+            span {
+                .name, .account-balance {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    
+        .user-nav-links {
+            font-size: 14px;
+        }
+    }
+
+    .user-information {
+        font-size: 14px;
+    }
+
+    .filter {
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .login-page {
+        .lendsqr-logo {
+            top: 40px;
+            left: 30px;
+        }
+
+        .image-2d img {
+            width: 100%;
+        }
+
+        .center-form {
+            width: min(85%, 450px);
+            margin: 0 auto;        
+        
+            form {
+                width: min(100%, 450px);
+                padding: 0;
+            } 
+        }
+    }
+
+    .page-header {
+        height: 60px;
+        padding: 0 30px;
+        justify-content: space-between;
+
+        .app-logo {
+            width: fit-content;
+            padding: 0;
+        }
+
+        .content {
+            width: fit-content;
+            justify-content: flex-start;
+
+            .content-container {
+                width: 100%;
+            }
+
+            .search-bar {
+                display: none;
+            }
+        }
+
+        .search-bar {
+            height: 35px;
+            width: 300px;
+
+            span {
+                width: 50px;
+            }
+        }
+
+        .sm-search-bar {
+            display: flex;
+        }
+
+        .user {
+            font-size: 14px;
+
+            .notification-bell {
+                height: 20px;
+            }
+
+            .avatar {
+                height: 40px;
+                width: 40px;
+            }
+
+            .profile div {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .side-navbar {
+        padding-bottom: 0;
+    }
+
+    .dashboard .page-body {
+        h1 {
+            font-size: 22px;
+        }
+    }
+
+    .users-data {
+        .table-container {
+            overflow-x: scroll;
+
+            .table {
+                min-width: 1100px;
+                padding: 25px;
+            }
+        }
+    }
+
+    .user-snippet {
+        font-size: 12px;
+    }
+
+    .user-detail-summary {
         height: fit-content;
         padding: 20px;
 
@@ -338,13 +245,6 @@
             .avatar {
                 height: 60px;
                 width: 60px;
-            }
-
-            span {
-                .name, .account-balance {
-                    font-size: 18px;
-                    line-height: 22px;
-                }
             }
 
             .section-2 {
@@ -372,12 +272,8 @@
         }
     }
 
-    .user-information {
-        font-size: 14px;
-
-        .section-contents {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
+    .user-information .section-contents {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
@@ -494,6 +390,10 @@
                 padding-left: 25px;
             }
         }
+
+        .nav-items-category, .nav-item {
+            padding-left: 25px;
+        }
     }
 
     .dashboard .page-body .main-content {
@@ -548,12 +448,33 @@
         }
     }
 
+    .dashboard .page-body {
+        h1 {
+            font-size: 20px;
+        }
+    }
+
     .side-navbar {
         position: absolute;
-        inset: 0;
         top: 60px;
         width: 100vw;
-        display: none;
+        padding-bottom: 60px;
+
+        .menu-buttons {
+            display: block;
+        }
+
+        .top-section, .bottom-section {
+            div {
+                padding-left: 20px;
+            }
+        }
+
+        .nav-items-category, .nav-item {
+            padding-left: 20px;
+        }
+
+        
     }
 
     .dashboard .page-body {
@@ -589,11 +510,35 @@
         padding-bottom: 30px;
 
         .table-container .table {
-            padding: 25px 20px;
+            padding: 20px;
         }
     }
 
     .user-details {
         padding-bottom: 30px;
+    }
+}
+
+.open-sidebar {
+    animation: openSidebar 0.5s ease 0s 1 normal forwards;
+}
+.close-sidebar {
+    animation: closeSidebar 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes openSidebar {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes closeSidebar {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
     }
 }

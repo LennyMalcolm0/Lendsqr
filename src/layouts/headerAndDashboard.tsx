@@ -1,3 +1,9 @@
+import { Link } from "react-router-dom";
+import NavLinksCategory from "../components/navLinksCategory";
+import { customerCategoryItems, businessCategoryItems, settingsCategoryItems } from "./data";
+import React, { useState } from "react";
+import UsersSummary from "../components/usersSummary";
+
 const HeaderAndDashboard = () => {
     return ( 
         <div className="dashboard">
@@ -73,15 +79,6 @@ const HeaderAndDashboard = () => {
                 </div>
                 <div className="main-content">
                     <div className="container">
-                        <div className="search-bar sm-search-bar">
-                            <input type="text" placeholder="Search for anything" />
-                            <span>
-                                <img src="icons\pageHeader\search-icon.svg" />
-                            </span>
-                        </div>
-                        <h1>Users</h1>
-                        <UsersSummary />
-                        <UserData />
                     </div>
                 </div>
             </main>

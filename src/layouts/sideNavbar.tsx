@@ -1,9 +1,37 @@
+import { Link } from "react-router-dom";
 import NavLinksCategory from "../components/navLinksCategory";
 import { customerCategoryItems, businessCategoryItems, settingsCategoryItems } from "./data";
+import { useState } from 'react';
 
+interface Props {
+    displaySidebar: () => boolean;
+    removeSidebar: () => boolean;
+}
 const SideNavbar = () => {
+    const [menuOpened, setMenuOpened] = useState(false);
+
+    const openMenu = () => {
+        setMenuOpened(true);
+    };
+    const closeMenu = () => {
+        setMenuOpened(false);
+    };
+
     return (  
-        <div className="side-navbar">
+        <>
+         <div className="page-header">
+            <div className="app-logo">
+                <img src="images\lendsqr-logo.svg" />
+            </div>
+
+            <div className="menu-buttons">
+                {!menuOpened ? 
+                    <img src="icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
+                    <img src="icons\pageHeader\close-menu.svg" onClick={closeMenu} />
+                }
+            </div>
+        </div>
+        <div className={`side-navbar`}>
             <div className="top-section">
                 <div className="dropdown">
                     <img src="icons\sideNavbar\switch-organization.svg" alt="" />
@@ -20,17 +48,18 @@ const SideNavbar = () => {
                 <NavLinksCategory category="customers" navLinkDetails={customerCategoryItems} />
                 <NavLinksCategory category="businesses" navLinkDetails={businessCategoryItems} />
                 <NavLinksCategory category="settings" navLinkDetails={settingsCategoryItems} />
-                </div>
+            </div>
 
             <div className="bottom-section">
-                <div className="nav-item">
+                <Link to="/login" className="nav-item">
                     <img src="icons\sideNavbar\switch-organization.svg" alt="" />
                     <span>Logout</span>
                     <div className="dim-background"></div>
-                </div>
+                </Link>
                 <div className="app-version">v1.2.0</div>
             </div>
         </div>
+        </>
     );
 }
  

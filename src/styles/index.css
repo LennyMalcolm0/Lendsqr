@@ -214,7 +214,7 @@ h1 {
   overflow-x: hidden;
 }
 .dashboard .page-body .main-content .container {
-  width: 90%;
+  width: 95%;
   max-width: 1500px;
 }
 .dashboard .page-body .main-content .sm-search-bar {
@@ -248,7 +248,7 @@ h1 {
   justify-content: center;
 }
 .page-header .content .content-container {
-  width: 90%;
+  width: 95%;
   max-width: 1500px;
   display: flex;
   align-items: center;
@@ -267,6 +267,7 @@ h1 {
 .page-header .content .user .notification-bell {
   height: 26px;
   margin-left: 20px;
+  margin-right: 5px;
   cursor: pointer;
 }
 .page-header .content .user .profile {
@@ -301,10 +302,17 @@ h1 {
 .side-navbar {
   height: 100%;
   width: 280px;
+  padding-bottom: 30px;
   background: white;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   overflow-y: scroll;
   z-index: 999999;
+}
+.side-navbar .menu-buttons {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  display: none;
 }
 .side-navbar .top-section div, .side-navbar .bottom-section div {
   height: 40px;
@@ -439,11 +447,10 @@ h1 {
   padding-bottom: 50px;
 }
 .users-data .table-container {
-  width: 104%;
+  width: 100%;
 }
 .users-data .table-container .table {
-  width: 96%;
-  min-width: 1200px;
+  width: 100%;
   padding: 35px 30px;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -465,7 +472,7 @@ h1 {
 }
 .users-data .table-container .table .headers .header:nth-child(3) {
   position: relative;
-  right: 50px;
+  right: 30px;
   width: 200px;
 }
 .users-data .table-container .table .headers .header .filter-container {
@@ -493,7 +500,6 @@ h1 {
   display: flex;
   align-items: center;
   color: #545F7D;
-  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
@@ -515,6 +521,7 @@ h1 {
 }
 .users-data .controller .pagination div, .users-data .controller .pagination span {
   margin-left: 20px;
+  cursor: pointer;
 }
 .users-data .controller .pagination div {
   padding: 5px;
@@ -610,7 +617,7 @@ h1 {
 }
 .user-snippet .category:nth-child(3) {
   position: relative;
-  right: 50px;
+  right: 30px;
   width: 200px;
 }
 .user-snippet .base-line {
@@ -879,78 +886,25 @@ h1 {
   opacity: 0.1;
 }
 
-@media screen and (max-width: 1100px) {
-  .login-page .lendsqr-logo {
-    top: 40px;
-    left: 30px;
-  }
-  .login-page .image-2d img {
-    width: 100%;
-  }
-  .login-page .center-form {
-    width: min(85%, 450px);
-    margin: 0 auto;
-  }
-  .login-page .center-form form {
-    width: min(100%, 450px);
-    padding: 0;
-  }
-  .page-header {
-    height: 60px;
-    padding: 0 30px;
-    justify-content: space-between;
-  }
+@media screen and (max-width: 1300px) {
   .page-header .app-logo {
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
+    width: 250px;
   }
   .page-header .app-logo img {
     height: 25px;
   }
   .page-header .content {
-    width: -moz-fit-content;
-    width: fit-content;
-    justify-content: flex-start;
-  }
-  .page-header .content .content-container {
-    width: 100%;
-  }
-  .page-header .content .search-bar {
-    display: none;
-  }
-  .page-header .search-bar {
-    height: 35px;
-    width: 300px;
-  }
-  .page-header .search-bar span {
-    width: 50px;
-  }
-  .page-header .sm-search-bar {
-    display: flex;
-  }
-  .page-header .user {
-    font-size: 14px;
-  }
-  .page-header .user .notification-bell {
-    height: 20px;
-  }
-  .page-header .user .avatar {
-    height: 40px;
-    width: 40px;
-  }
-  .page-header .user .profile div {
-    font-size: 12px;
+    width: calc(100% - 250px);
   }
   .side-navbar {
-    width: 240px;
+    width: 250px;
     font-size: 14px;
   }
   .dashboard .page-body {
     height: calc(100vh - 60px);
   }
   .dashboard .page-body .main-content {
-    width: calc(100% - 240px);
+    width: calc(100% - 250px);
   }
   .users-summary .card {
     padding: 20px;
@@ -961,128 +915,6 @@ h1 {
   .users-summary .card .value {
     align-self: baseline;
     font-size: 20px;
-  }
-  .users-data .table-container {
-    overflow-x: scroll;
-  }
-  .users-data .table-container .table {
-    min-width: 1100px;
-  }
-  .users-data .table-container .table .headers .header {
-    font-size: 10px;
-    line-height: 12px;
-  }
-  .users-data .table-container .table .headers .header img {
-    scale: 0.8;
-  }
-  .users-data .controller {
-    font-size: 14px;
-  }
-  .users-data .controller .current-display {
-    font-size: 12px;
-    line-height: 14px;
-  }
-  .users-data .controller .pagination div {
-    padding: 3px;
-  }
-  .users-data .controller .pagination div img {
-    scale: 0.8;
-  }
-  .user-snippet {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .login-page .lendsqr-logo {
-    top: 40px;
-    left: 30px;
-  }
-  .login-page .image-2d img {
-    width: 100%;
-  }
-  .login-page .center-form {
-    width: min(85%, 450px);
-    margin: 0 auto;
-  }
-  .login-page .center-form form {
-    width: min(100%, 450px);
-    padding: 0;
-  }
-  .page-header {
-    height: 60px;
-    padding: 0 30px;
-    justify-content: space-between;
-  }
-  .page-header .app-logo {
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-  }
-  .page-header .app-logo img {
-    height: 25px;
-  }
-  .page-header .content {
-    width: -moz-fit-content;
-    width: fit-content;
-    justify-content: flex-start;
-  }
-  .page-header .content .content-container {
-    width: 100%;
-  }
-  .page-header .content .search-bar {
-    display: none;
-  }
-  .page-header .search-bar {
-    height: 35px;
-    width: 300px;
-  }
-  .page-header .search-bar span {
-    width: 50px;
-  }
-  .page-header .sm-search-bar {
-    display: flex;
-  }
-  .page-header .user {
-    font-size: 14px;
-  }
-  .page-header .user .notification-bell {
-    height: 20px;
-  }
-  .page-header .user .avatar {
-    height: 40px;
-    width: 40px;
-  }
-  .page-header .user .profile div {
-    font-size: 12px;
-  }
-  .side-navbar {
-    width: 240px;
-    font-size: 14px;
-  }
-  .dashboard .page-body {
-    height: calc(100vh - 60px);
-  }
-  .dashboard .page-body .main-content {
-    width: calc(100% - 240px);
-  }
-  .dashboard .page-body .main-content h1 {
-    font-size: 22px;
-  }
-  .users-summary .card {
-    padding: 20px;
-  }
-  .users-summary .card .title {
-    font-size: 12px;
-  }
-  .users-summary .card .value {
-    align-self: baseline;
-    font-size: 20px;
-  }
-  .users-data .table-container {
-    overflow-x: scroll;
-  }
-  .users-data .table-container .table {
-    min-width: 1100px;
   }
   .users-data .table-container .table .headers .header {
     font-size: 10px;
@@ -1122,6 +954,100 @@ h1 {
     margin-bottom: 20px;
     font-size: 12px;
   }
+  .user-detail-summary .profile .avatar {
+    height: 80px;
+    width: 80px;
+  }
+  .user-detail-summary .profile span .name, .user-detail-summary .profile span .account-balance {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .user-detail-summary .user-nav-links {
+    font-size: 14px;
+  }
+  .user-information {
+    font-size: 14px;
+  }
+  .filter {
+    scale: 0.8;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .login-page .lendsqr-logo {
+    top: 40px;
+    left: 30px;
+  }
+  .login-page .image-2d img {
+    width: 100%;
+  }
+  .login-page .center-form {
+    width: min(85%, 450px);
+    margin: 0 auto;
+  }
+  .login-page .center-form form {
+    width: min(100%, 450px);
+    padding: 0;
+  }
+  .page-header {
+    height: 60px;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+  .page-header .app-logo {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+  .page-header .content {
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: flex-start;
+  }
+  .page-header .content .content-container {
+    width: 100%;
+  }
+  .page-header .content .search-bar {
+    display: none;
+  }
+  .page-header .search-bar {
+    height: 35px;
+    width: 300px;
+  }
+  .page-header .search-bar span {
+    width: 50px;
+  }
+  .page-header .sm-search-bar {
+    display: flex;
+  }
+  .page-header .user {
+    font-size: 14px;
+  }
+  .page-header .user .notification-bell {
+    height: 20px;
+  }
+  .page-header .user .avatar {
+    height: 40px;
+    width: 40px;
+  }
+  .page-header .user .profile div {
+    font-size: 12px;
+  }
+  .side-navbar {
+    padding-bottom: 0;
+  }
+  .dashboard .page-body h1 {
+    font-size: 22px;
+  }
+  .users-data .table-container {
+    overflow-x: scroll;
+  }
+  .users-data .table-container .table {
+    min-width: 1100px;
+    padding: 25px;
+  }
+  .user-snippet {
+    font-size: 12px;
+  }
   .user-detail-summary {
     height: -moz-fit-content;
     height: fit-content;
@@ -1133,10 +1059,6 @@ h1 {
   .user-detail-summary .profile .avatar {
     height: 60px;
     width: 60px;
-  }
-  .user-detail-summary .profile span .name, .user-detail-summary .profile span .account-balance {
-    font-size: 18px;
-    line-height: 22px;
   }
   .user-detail-summary .profile .section-2 {
     flex-direction: row-reverse;
@@ -1157,9 +1079,6 @@ h1 {
   }
   .user-detail-summary .user-nav-links {
     display: none;
-  }
-  .user-information {
-    font-size: 14px;
   }
   .user-information .section-contents {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1252,6 +1171,9 @@ h1 {
   .side-navbar .top-section div, .side-navbar .bottom-section div {
     padding-left: 25px;
   }
+  .side-navbar .nav-items-category, .side-navbar .nav-item {
+    padding-left: 25px;
+  }
   .dashboard .page-body .main-content {
     width: calc(100% - 220px);
   }
@@ -1291,12 +1213,23 @@ h1 {
   .page-header .menu-buttons img {
     height: 35px;
   }
+  .dashboard .page-body h1 {
+    font-size: 20px;
+  }
   .side-navbar {
     position: absolute;
-    inset: 0;
     top: 60px;
     width: 100vw;
-    display: none;
+    padding-bottom: 60px;
+  }
+  .side-navbar .menu-buttons {
+    display: block;
+  }
+  .side-navbar .top-section div, .side-navbar .bottom-section div {
+    padding-left: 20px;
+  }
+  .side-navbar .nav-items-category, .side-navbar .nav-item {
+    padding-left: 20px;
   }
   .dashboard .page-body .main-content {
     width: 100%;
@@ -1323,9 +1256,33 @@ h1 {
     padding-bottom: 30px;
   }
   .users-data .table-container .table {
-    padding: 25px 20px;
+    padding: 20px;
   }
   .user-details {
     padding-bottom: 30px;
+  }
+}
+.open-sidebar {
+  animation: openSidebar 0.5s ease 0s 1 normal forwards;
+}
+
+.close-sidebar {
+  animation: closeSidebar 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes openSidebar {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes closeSidebar {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
   }
 }

@@ -5,27 +5,38 @@ import SideNavbar from "../layouts/sideNavbar";
 import { useState, useEffect } from 'react';
 
 const UsersPage = () => {
-    const [sideNavbarOpened, setsideNavbarOpened] = useState(true);
+    const [sideNavbarOpened, setsideNavbarOpened] = useState(false);
 
     // Functions are in sync with that of page header component
-    const sideNavbar = document.querySelector(".side-navbar") as HTMLElement;
 
     const openSideNavbar = () => {
-        sideNavbar.style.display = "block";
+        return true
+        // const sideNavbar = document.querySelector(".side-navbar") as HTMLElement;
+        // sideNavbar.style.display = "block";
     };
     const closeSideNavbar = () => {
-        sideNavbar.style.display = "none";
+        return false
+        // const sideNavbar = document.querySelector(".side-navbar") as HTMLElement;
+        // sideNavbar.style.display = "none";
     };
 
-    useEffect(() => {
-        const menuButtons = document.querySelectorAll(".menu-buttons") as NodeListOf<HTMLElement>;
-        menuButtons[0]?.addEventListener("click", openSideNavbar);
-        menuButtons[1]?.addEventListener("click", closeSideNavbar);
-    }, []);
+    // useEffect(() => {
+    //     const menuButtons = document.querySelectorAll(".menu-buttons img") as NodeListOf<HTMLElement>;
+    //     if (menuButtons[0] && menuButtons[1]) {      
+    //         menuButtons[0].addEventListener("click", () => {
+    //             setsideNavbarOpened(false)
+    //             console.log("sideNavbarOpened")
+    //         });
+    //         menuButtons[1].addEventListener("click", () => {
+    //             setsideNavbarOpened(true)
+    //             console.log("fsgfgrfhrf")
+    //         });  
+    //     }
+    // }, []);
 
     return ( 
         <div className="dashboard">
-            <PageHeader />
+            <PageHeader  />
             <div className="page-body">
                 <SideNavbar />
                 <div className="main-content">
