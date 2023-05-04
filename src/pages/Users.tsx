@@ -2,7 +2,6 @@ import UsersSummary from "../components/usersSummary";
 import UserData from "../components/userData";
 import PageHeader from "../layouts/PageHeader";
 import SideNavbar from "../layouts/SideNavbar";
-import { useState, useEffect } from 'react';
 
 const UsersPage = () => {
     return ( 
