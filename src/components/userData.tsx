@@ -29,7 +29,6 @@ const UserData = () => {
         const dataJson = localStorage.getItem("usersData");
         if (dataJson !== null) {
             setRetrievedData(JSON.parse(dataJson));
-            console.log(retrievedUserData)
         }
     }, []);
 
@@ -56,7 +55,7 @@ const UserData = () => {
                         {headers.map((value, index) => (
                             <div key={index} className="header">
                                 <span>{value.toUpperCase()}</span>
-                                <img src="icons\userData\filter.svg" alt="" onClick={openFilter} />
+                                <img src="/icons\userData\filter.svg" alt="" onClick={openFilter} />
                                 <div className="filter-container">
                                     <FilterUsers />
                                 </div>
@@ -89,19 +88,19 @@ const UserData = () => {
                     <span>Showing</span>
                     <span className="dropdown">
                         <span>100</span>
-                        <img src="icons\userData\arrow.svg" alt="" />
+                        <img src="/icons\userData\arrow.svg" alt="" />
                     </span>
                     <span>out of 100</span>
                 </div>
                 <div className="pagination">
-                    <div><img src="icons\userData\arrow.svg" alt="" /></div>
+                    <div><img src="/icons\userData\arrow.svg" alt="" /></div>
                     <span className="active">1</span>
                     <span>2</span>
                     <span>3</span>
                     <span>...</span>
                     <span>9</span>
                     <span>10</span>
-                    <div><img src="icons\userData\arrow.svg" alt="" /></div>
+                    <div><img src="/icons\userData\arrow.svg" alt="" /></div>
                 </div>
             </div>
         </div>

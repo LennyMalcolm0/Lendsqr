@@ -3,9 +3,12 @@ import UserDetailSummary from "../components/userDetailSummary";
 import UserInformation from "../components/userInformation";
 import PageHeader from "../layouts/PageHeader";
 import SideNavbar from "../layouts/sideNavbar";
+import Dropdown from "../components/dropdown";
 
 const UserDetailsPage = () => {
     const navigateHistory = useNavigate();
+
+    const userNavlinks = ["General Details", "Documents", "Bank Details", "Loans", "Savings", "App and System"]
 
     return (  
         <div className="dashboard">
@@ -17,7 +20,7 @@ const UserDetailsPage = () => {
 
                         <div className="user-details">
                             <div className="go-back" onClick={() => navigateHistory(-1)}>
-                                <img src="icons\userData\go-back.svg" alt="" />
+                                <img src="/icons/userData/go-back.svg" alt="" />
                                 <span>Back to Users</span>
                             </div>
                             <div className="page-heading">
@@ -28,6 +31,7 @@ const UserDetailsPage = () => {
                                 </div>
                             </div>
                             <UserDetailSummary />
+                            <Dropdown defaultText="General Details" dropdownItems={userNavlinks} />
                             <UserInformation />
                         </div>
                         

@@ -1,22 +1,22 @@
 const UsersSummary = () => {
     const dataSummary = [
         {
-            imageSource: "icons/summary/users.svg",
+            imageSource: "/icons/summary/users.svg",
             title: "Users",
             value: "2,453",
         },
         {
-            imageSource: "icons/summary/active-users.svg",
+            imageSource: "/icons/summary/active-users.svg",
             title: "Active Users",
             value: "2,453",
         },
         {
-            imageSource: "icons/summary/users-loans.svg",
+            imageSource: "/icons/summary/users-loans.svg",
             title: "Users with Loans",
             value: "12,453",
         },
         {
-            imageSource: "icons/summary/users-savings.svg",
+            imageSource: "/icons/summary/users-savings.svg",
             title: "Users with Savings",
             value: "102,453",
         },

@@ -746,6 +746,9 @@ h1 {
 .user-details .go-back img {
   margin-right: 15px;
 }
+.user-details .drop-down {
+  display: none;
+}
 .user-details .page-heading {
   display: flex;
   align-items: center;
@@ -1109,6 +1112,23 @@ h1 {
   .user-snippet {
     font-size: 12px;
   }
+  .user-details {
+    padding-bottom: 30px;
+  }
+  .user-details .drop-down {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .user-details .drop-down .main-display {
+    height: 40px;
+  }
+  .user-details .drop-down .select-items {
+    top: 50px;
+  }
+  .user-details .user-information {
+    margin: 0;
+  }
   .user-detail-summary {
     height: -moz-fit-content;
     height: fit-content;
@@ -1333,6 +1353,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .user-page-header .app-logo img {
+    height: 25px;
   }
   .dashboard .page-body .main-content {
     width: 100%;

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 interface Props {
+    defaultText?: string;
     dropdownItems: string[];
 }
-const Dropdown = ({dropdownItems}: Props) => {
+const Dropdown = ({defaultText, dropdownItems}: Props) => {
     const [ dropdownOpened, setDropdownOpened ] = useState<boolean>(false);
 
     const openDropdown = () => {
@@ -21,8 +22,8 @@ const Dropdown = ({dropdownItems}: Props) => {
     return (  
         <div className="drop-down">
             <div className="main-display" onClick={openDropdown}>
-                <div className="current-value">Select</div>
-                <img src="icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />
+                <div className="current-value">{defaultText ? defaultText : "Select"}</div>
+                <img src="/icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />
             </div>
             {dropdownOpened &&
                 <div className="select-items">

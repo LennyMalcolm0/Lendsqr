@@ -804,6 +804,10 @@ h1 {
         }
     }
 
+    .drop-down {
+        display: none;
+    }
+
     .page-heading {
         @include spaceBetweenContents();
 

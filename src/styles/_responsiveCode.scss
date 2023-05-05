@@ -297,6 +297,28 @@
         font-size: 12px;
     }
 
+    .user-details {
+        padding-bottom: 30px;
+
+        .drop-down {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+            .main-display {
+                height: 40px;
+            }
+
+            .select-items {
+                top: 50px;
+            }
+        }
+
+        .user-information {
+            margin: 0;
+        }
+    }
+
     .user-detail-summary {
         height: fit-content;
         padding: 20px;
@@ -579,6 +601,10 @@
         box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
         border-bottom: 1px solid rgba(0, 0, 0, 0.16);
         @include spaceBetweenContents();
+
+        .app-logo img {
+            height: 25px;
+        }
     }
 
     .dashboard .page-body {
