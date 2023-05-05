@@ -37,3 +37,4 @@ Run `npm install` or `npm i` on your terminal to install all dependencies.
 ## Getting Started
 
 To get started with Lendsqr's digital lending platform, simply sign up for an account on our website (https://lendsqr.com/). Our team will work with you to configure the platform according to your business needs.
+

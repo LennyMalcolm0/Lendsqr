@@ -147,7 +147,7 @@ h1 {
   color: #213F7D;
   font-size: 40px;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 0px;
 }
 .login-page form h3 {
   margin-bottom: 50px;
@@ -524,7 +524,7 @@ h1 {
   font-weight: 500;
 }
 .users-data .controller .current-display .dropdown img {
-  margin-left: 15px;
+  margin-left: 8px;
 }
 .users-data .controller .pagination {
   display: flex;
@@ -1228,7 +1228,6 @@ h1 {
   }
   .login-page .form-container form h1 {
     font-size: 35px;
-    line-height: 50px;
   }
   .login-page .form-container form h3 {
     font-size: 16px;

@@ -87,7 +87,7 @@ const UserData = () => {
                 <div className="current-display">
                     <span>Showing</span>
                     <span className="dropdown">
-                        <span>100</span>
+                        <span>10</span>
                         <img src="/icons\userData\arrow.svg" alt="" />
                     </span>
                     <span>out of 100</span>
