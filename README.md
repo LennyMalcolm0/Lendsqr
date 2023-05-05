@@ -40,7 +40,6 @@ Development of the following pages;
 <ol>
   <li>Login</li> 
   <li>Dashboard</li> 
-  <li>User</li> 
   <li>User details</li>
  </ol>
 
