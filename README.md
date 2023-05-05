@@ -34,6 +34,16 @@ Run `npm install` or `npm i` on your terminal to install all dependencies.
 
 **Client:** React, TypeScript, SASS
 
+## Progress Made
+
+Development of the following pages;
+<ol>
+  <li>Login</li> 
+  <li>Dashboard</li> 
+  <li>User</li> 
+  <li>User details</li>
+ </ol>
+
 ## Getting Started
 
 To get started with Lendsqr's digital lending platform, simply sign up for an account on our website (https://lendsqr.com/). Our team will work with you to configure the platform according to your business needs.
