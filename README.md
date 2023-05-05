@@ -32,7 +32,16 @@ Run `npm install` or `npm i` on your terminal to install all dependencies.
 
 ## Tech Stack
 
-**Client:** React, TypeScript, SASS
+**Client:** React, TypeScript, SASS, React Router
+
+## Progress Made
+
+Development of the following pages;
+<ol>
+  <li>Login</li> 
+  <li>Dashboard</li> 
+  <li>User details</li>
+ </ol>
 
 ## Getting Started
 
