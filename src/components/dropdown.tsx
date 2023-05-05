@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface Props {
     defaultText?: string;
@@ -13,14 +13,31 @@ const Dropdown = ({defaultText, dropdownItems}: Props) => {
 
     const setValue = (e: React.MouseEvent<HTMLElement>) => {
         const optionValue = e.target as HTMLElement;
-        const currentValue = document.querySelector(".current-value") as HTMLElement;
+        const dropDown = optionValue.closest(".drop-down") as HTMLElement;
+        const currentValue = dropDown.querySelector(".current-value") as HTMLElement;
 
         currentValue.textContent = optionValue.textContent;
         setDropdownOpened(false);
     }
 
+    // Close dropdown on clicking outside the dropdown
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const clickedOutsideElement = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setDropdownOpened(false);
+            }
+        };
+    
+        document.addEventListener("mousedown", clickedOutsideElement);
+    
+        return () => {
+            document.removeEventListener("mousedown", clickedOutsideElement);
+        };
+    }, [dropdownRef]);
+
     return (  
-        <div className="drop-down">
+        <div className="drop-down" ref={dropdownRef}>
             <div className="main-display" onClick={openDropdown}>
                 <div className="current-value">{defaultText ? defaultText : "Select"}</div>
                 <img src="/icons\userData\arrow.svg" alt="" className={`${dropdownOpened ? "rotate-up" : "rotate-down"}`} />

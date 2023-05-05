@@ -50,7 +50,7 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 25px;
-    background-color: $secondary;
+    background-color: rgba(33, 63, 125, 0.6);;
 }
 
 .search-bar {
@@ -610,7 +610,7 @@ h1 {
 
     .category {
         position: relative;
-        width: 100%;
+        max-width: 100%;
         @include spaceBetweenContents();
         text-align: start;
 
@@ -752,6 +752,7 @@ h1 {
         margin-top: 5px;
         margin-bottom: 20px;
         padding: 0 20px;
+        background: white;
         border: 1px solid rgba(84, 95, 125, 0.14);
         border-radius: 8px;
         @include spaceBetweenContents();

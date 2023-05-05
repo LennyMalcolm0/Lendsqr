@@ -5,7 +5,7 @@ import { useFetch } from "../hooks/useFetch";
 import { useEffect, useRef, useState } from "react";
 
 const UserData = () => {
-    const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ]
+    const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ];
 
     const openFilter = (e: React.MouseEvent<HTMLElement>) => {
         const filterImage = e.target as HTMLElement;

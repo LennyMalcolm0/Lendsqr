@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface Props {
     organization: string;
@@ -16,6 +16,22 @@ const UserSnippet = ({organization, username, email, phoneNumber, dateJoined, us
         setOpenedMenu(openedMenu === true ? false : true);
     };
 
+    // Close menu on clicking outside the menu
+    const menuRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const clickedOutsideElement = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setOpenedMenu(false);
+            }
+        };
+    
+        document.addEventListener("mousedown", clickedOutsideElement);
+    
+        return () => {
+            document.removeEventListener("mousedown", clickedOutsideElement);
+        };
+    }, [menuRef]);
+
     return (  
         <div className="user-snippet">
             <div className="category">{organization}</div>
@@ -31,7 +47,7 @@ const UserSnippet = ({organization, username, email, phoneNumber, dateJoined, us
                 <img src="/icons\userData\details.svg" alt="" onClick={openMenu} />
 
                 {openedMenu &&
-                    <div className="menu">
+                    <div className="menu" ref={menuRef}>
                         <Link to={`/user-details/${userId}`} className="item">
                             <img src="/icons\userData\eye.svg" alt="" />
                             <span>View Details</span>
