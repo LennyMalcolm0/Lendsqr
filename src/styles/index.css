@@ -514,7 +514,7 @@ h1 {
   font-size: 14px;
   line-height: 16px;
 }
-.users-data .controller .current-display .dropdown {
+.users-data .controller .current-display .value {
   padding: 10px;
   margin: 0 10px;
   border-radius: 4px;
@@ -522,9 +522,6 @@ h1 {
   display: flex;
   align-items: center;
   font-weight: 500;
-}
-.users-data .controller .current-display .dropdown img {
-  margin-left: 8px;
 }
 .users-data .controller .pagination {
   display: flex;
@@ -537,12 +534,9 @@ h1 {
 .users-data .controller .pagination div {
   padding: 5px;
   border-radius: 4px;
-  background: rgba(33, 63, 125, 0.1);
+  background: rgba(33, 63, 125, 0.25);
   display: grid;
   place-items: center;
-}
-.users-data .controller .pagination div:first-child {
-  opacity: 0.6;
 }
 .users-data .controller .pagination div:first-child img {
   transform: rotate(90deg);
@@ -551,11 +545,7 @@ h1 {
   transform: rotate(-90deg);
 }
 .users-data .controller .pagination span {
-  opacity: 0.6;
-}
-.users-data .controller .pagination .active {
-  opacity: 1;
-  font-weight: 500;
+  cursor: default;
 }
 
 .user-snippet {
@@ -1258,12 +1248,6 @@ h1 {
   .dashboard .page-body .main-content {
     width: calc(100% - 220px);
   }
-  .controller .pagination span {
-    display: none;
-  }
-  .controller .pagination .active {
-    display: block;
-  }
   .user-information {
     padding: 20px;
     padding-top: 0;
@@ -1298,6 +1282,7 @@ h1 {
   .side-navbar {
     position: absolute;
     top: 60px;
+    left: -100%;
     width: 100vw;
     padding-bottom: 60px;
   }
@@ -1383,6 +1368,9 @@ h1 {
   }
   .users-data .table-container .table {
     padding: 20px;
+  }
+  .users-data .controller .pagination span, .users-data .controller .pagination div {
+    margin-left: 15px;
   }
   .user-details {
     padding-bottom: 30px;

@@ -2,7 +2,7 @@
 import FilterUsers from "./filterUsers";
 import UserSnippet from "./userSnippet";
 import { useFetch } from "../hooks/useFetch";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const UserData = () => {
     const headers = [ "organization", "Username", "Email", "Phone number", "Date joined", "Status" ];
@@ -16,21 +16,26 @@ const UserData = () => {
         }
     };
 
+    const {data} = useFetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users');
     const [start, setStart] = useState(0);
     const [end, setEnd] = useState(10);
-    const {data} = useFetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users');
+    const [pageNumber, setPageNumber] = useState(1);
 
-    if (data) {
-        localStorage.setItem("usersData", JSON.stringify(data));
+    const forwardPagination = () => {
+        if (end === 100) return;
+
+        setStart(start + 10);
+        setEnd(end + 10);
+        setPageNumber(pageNumber + 1);
+    };
+
+    const backwardPagination = () => {
+        if (start === 0) return;
+
+        setStart(start - 10);
+        setEnd(end - 10);
+        setPageNumber(pageNumber - 1);
     }
-
-    const [retrievedUserData, setRetrievedData] = useState<any>();
-    useEffect(() => {
-        const dataJson = localStorage.getItem("usersData");
-        if (dataJson !== null) {
-            setRetrievedData(JSON.parse(dataJson));
-        }
-    }, []);
 
     // Function for formatting unreadable dates from usersData API to one that is readable
     function formatDate(createdAt: string) {
@@ -63,8 +68,8 @@ const UserData = () => {
                         ))}
                     </div>
                     <div className="users-info">
-                        {retrievedUserData &&
-                            retrievedUserData
+                        {data &&
+                            data
                                 .filter((user: any) => user.id >= start && user.id <= end) 
                                 .map((user: any) => (
                                     <div key={user.id}>
@@ -86,21 +91,15 @@ const UserData = () => {
             <div className="controller">
                 <div className="current-display">
                     <span>Showing</span>
-                    <span className="dropdown">
+                    <span className="value">
                         <span>10</span>
-                        <img src="/icons\userData\arrow.svg" alt="" />
                     </span>
                     <span>out of 100</span>
                 </div>
                 <div className="pagination">
-                    <div><img src="/icons\userData\arrow.svg" alt="" /></div>
-                    <span className="active">1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>...</span>
-                    <span>9</span>
-                    <span>10</span>
-                    <div><img src="/icons\userData\arrow.svg" alt="" /></div>
+                    <div onClick={backwardPagination}><img src="/icons\userData\arrow.svg" alt="" /></div>
+                    <span>{pageNumber}</span>
+                    <div onClick={forwardPagination}><img src="/icons\userData\arrow.svg" alt="" /></div>
                 </div>
             </div>
         </div>

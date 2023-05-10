@@ -4,13 +4,13 @@ import { customerCategoryItems, businessCategoryItems, settingsCategoryItems } f
 import { useState } from "react";
 
 const SideNavbar = () => {
-    const [menuOpened, setMenuOpened] = useState(false);
+    const [menuOpened, setMenuOpened] = useState("null");
 
     const openMenu = () => {
-        setMenuOpened(true);
+        setMenuOpened("true");
     };
     const closeMenu = () => {
-        setMenuOpened(false);
+        setMenuOpened("false");
     };
 
     return (  
@@ -21,14 +21,13 @@ const SideNavbar = () => {
             </div>
 
             <div className="menu-buttons">
-                {!menuOpened ? 
-                    <img src="/icons\pageHeader\open-menu.svg" onClick={openMenu} /> :
-                    <img src="/icons\pageHeader\close-menu.svg" onClick={closeMenu} />
-                }
+                {menuOpened === "null" && <img src="/icons\pageHeader\open-menu.svg" onClick={openMenu} />}
+                {menuOpened === "false" && <img src="/icons\pageHeader\open-menu.svg" onClick={openMenu} />}
+                {menuOpened === "true" && <img src="/icons\pageHeader\close-menu.svg" onClick={closeMenu} />}
             </div>
         </div>
         
-        <div className={`side-navbar ${menuOpened ? "open-sidebar" : "close-sidebar"}`}>
+        <div className={`side-navbar ${menuOpened === "true" && "open-sidebar"} ${menuOpened === "false" && "close-sidebar"}`}>
             <div className="user-mobile">
                 <div className="side-1">
                     <div className="avatar">

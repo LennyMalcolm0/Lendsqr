@@ -541,7 +541,7 @@ h1 {
             font-size: 14px;
             line-height: 16px;
 
-            .dropdown {
+            .value {
                 padding: 10px;
                 margin: 0 10px;
                 border-radius: 4px;
@@ -549,10 +549,6 @@ h1 {
                 display: flex;
                 align-items: center;
                 font-weight: 500;
-
-                img {
-                    margin-left: 8px;
-                }
             }
         }
 
@@ -568,31 +564,20 @@ h1 {
             div {
                 padding: 5px;
                 border-radius: 4px;
-                background: rgba(33, 63, 125, 0.1);
+                background: rgba(33, 63, 125, 0.25);
                 display: grid;
                 place-items: center;
 
-                &:first-child {
-                    opacity: 0.6;
-
-                    img {
-                        transform: rotate(90deg);
-                    }
+                &:first-child img {
+                    transform: rotate(90deg);
                 }
-                &:last-child {
-                    img {
-                        transform: rotate(-90deg);
-                    }
+                &:last-child img {
+                    transform: rotate(-90deg);
                 }
             }
 
             span {
-                opacity: 0.6;
-            }
-
-            .active {
-                opacity: 1;
-                font-weight: 500;
+                cursor: default;
             }
         }
     }
