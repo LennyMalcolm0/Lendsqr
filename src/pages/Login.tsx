@@ -9,12 +9,8 @@ const Login = () => {
                 if (!passwordInput) return;
 
                 passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-
-                if (passwordInput.type === "password") {
-                    showPassword.style.textDecoration = "none";
-                } else {
-                    showPassword.style.textDecoration = "line-through";
-                }
+        
+                showPassword.textContent = passwordInput.type === "password" ? "SHOW" : "HIDE";
             })
         }
     };
